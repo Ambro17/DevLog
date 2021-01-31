@@ -1,19 +1,16 @@
 <template>
   <div id="app">
-    <Nav class="mb-6" />
-    <HelloWorld msg="Welcome to Your Vue.js App" class="text-center"/>
+    <DevBlog />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Nav from './components/Nav.vue'
+import DevBlog from './components/DevBlog.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    Nav
+    DevBlog
   }
 }
 </script>
