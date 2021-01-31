@@ -1,5 +1,6 @@
 # Starter App - Vue.js with Tailwind
 
+<img width="1164" alt="Example Screenshot" src="homepage.png">
 
 
 ## Credits
