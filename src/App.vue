@@ -1,16 +1,15 @@
 <template>
   <div id="app">
-    <DevBlog />
+    <router-view />
+    <router-link to="/"></router-link>
+    <router-link to="/users"></router-link>
   </div>
 </template>
 
 <script>
-import DevBlog from './components/DevBlog.vue'
+// import BlogHome from './components/BlogHome.vue'
 
 export default {
-  name: 'App',
-  components: {
-    DevBlog
-  }
+  name: 'App'
 }
 </script>

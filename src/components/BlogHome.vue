@@ -1,4 +1,4 @@
-`<template>
+<template>
 <main class="font-sans bg-white">
   <div>
     <!-- Comment -->
@@ -44,6 +44,7 @@
           href='https://onapsis.com/'
           target="_blank">
           Onapsis</a> as a Sr Python Developer<br>
+          <router-link to="/users" class="nav-link">Go to a post</router-link><br>
         🤓 I'm currently learning Frontend development with Vue
         </p>
         <div class="flex items-end justify-center mt-8">
@@ -79,7 +80,8 @@
         <h2 class="text-2xl font-semibold text-gray-800">Latest Posts</h2>
 
         <div class="flex flex-col items-center justify-center mt-6">
-          <a class="max-w-2xl w-full block bg-white shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" href="#">
+          <a class="max-w-2xl w-full block bg-white shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" 
+             href="post.html">
             <div class="flex items-center justify-between px-4 py-2">
               <h3 class="text-lg font-medium text-gray-700">Why i Love GraphQL</h3>
               <span class="block text-gray-600 font-light text-sm">20 Jan 2020</span>
@@ -131,7 +133,7 @@
                 <img class="object-cover h-48" src="https://raw.githubusercontent.com/Ambro17/slackify/master/docs/logopro.svg" alt="">
               </div>
 
-              <a href="https://github.com/Ambro17/Slackify" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+              <a target="_blank" href="https://github.com/Ambro17/Slackify" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 <div class="py-2 px-3 text-center text-sm">
                   <p class="text-gray-300">🚀 Slackify</p>
                   <span class="block text-gray-500 mt-2">Lightweight framework to develop modern Slack bots.</span>
@@ -144,7 +146,7 @@
                 <img class="object-cover h-34" src="https://raw.githubusercontent.com/Ambro17/graphql-schema-diff/master/images/logo.svg?sanitize=true" alt="">
               </div>
 
-              <a href="https://github.com/Ambro17/graphql-schema-diff" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+              <a target="_blank" href="https://github.com/Ambro17/graphql-schema-diff" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 <div class="py-2 px-3 text-center text-sm">
                   <p class="text-gray-300">🔎 GraphQL Schema Diff</p>
                   <span class="block text-gray-500 mt-2">Compare GraphQL Schemas to detect breaking changes</span>
@@ -157,7 +159,7 @@
                 <img class="object-cover h-48" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="">
               </div>
 
-              <a href="https://github.com/Ambro17/AmbroBot" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+              <a target="_blank" href="https://github.com/Ambro17/AmbroBot" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 <div class="py-2 px-3 text-center text-sm">
                   <p class="text-gray-300">AmbroBot</p>
                   <span class="block text-gray-500 mt-2">🤖 Telegram bot to suit my needs</span>
@@ -221,6 +223,6 @@
 
 <script>
 export default {
-  name: 'DevBlog'
+  name: 'BlogHome'
 }
 </script>`
