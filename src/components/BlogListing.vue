@@ -13,7 +13,7 @@
         
       <!--Lead Card-->
       <div class="flex h-full bg-white rounded overflow-hidden shadow-lg">
-        <a href="post.html" class="flex flex-wrap no-underline hover:no-underline">
+        <a href="#" class="flex flex-wrap no-underline hover:no-underline">
           <div class="w-full md:w-2/3 rounded-t">	
             <img src="https://source.unsplash.com/collection/494263/800x600" class="h-full w-full shadow">
           </div>
