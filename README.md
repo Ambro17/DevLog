@@ -8,6 +8,10 @@
 Tutorial adapted from this [great post](https://dev.to/vonagedev/using-tailwind-css-with-vue-js-b1b)
 Using Ghostwind template from [here](https://github.com/tailwindtoolbox/Ghostwind)
 
+## TODO
+ [x] Create Header and Footer vue components
+ [ ] Migrate backend to graphql+strawberry (django? flask?)
+
 
 ## Project setup
 Install nvm to manage node & npm versions

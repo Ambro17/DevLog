@@ -14,8 +14,8 @@ const routes = [
     component: BlogHome
   },
   {
-    path: "/users",
-    name: "users",
+    path: "/post",
+    name: "post",
     component: BlogPost
   },
   {
