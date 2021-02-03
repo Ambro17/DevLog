@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import BlogHome from "./components/BlogHome.vue";
 import BlogPost from "./components/BlogPost.vue";
+import BlogListing from "./components/BlogListing.vue";
 
 Vue.use(VueRouter)
 
@@ -16,6 +17,11 @@ const routes = [
     path: "/users",
     name: "users",
     component: BlogPost
+  },
+  {
+    path: "/posts",
+    name: "posts",
+    component: BlogListing
   }
 ];
 

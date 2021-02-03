@@ -45,6 +45,7 @@
           target="_blank">
           Onapsis</a> as a Sr Python Developer<br>
           <router-link to="/users" class="nav-link">Go to a post</router-link><br>
+          <router-link to="/posts" class="nav-link">Go to a all posts</router-link><br>
         🤓 I'm currently learning Frontend development with Vue
         </p>
         <div class="flex items-end justify-center mt-8">
@@ -225,4 +226,4 @@
 export default {
   name: 'BlogHome'
 }
-</script>`
+</script>
