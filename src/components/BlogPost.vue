@@ -156,6 +156,7 @@
         </div>
       </div>
 
+      <Footer />
 
     </div>
   </body>
@@ -163,10 +164,13 @@
 
 <script>
 import Header from './Header.vue'
+import Footer from './Footer.vue'
+
 export default {
   name: 'BlogPost',
   components: {
-    Header
+    Header,
+    Footer
   }
 }
 </script>
