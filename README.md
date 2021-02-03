@@ -2,6 +2,7 @@
 
 <img width="1164" alt="Example Screenshot" src="homepage.png">
 
+[✨ Demo](https://dreamy-lumiere-c0033c.netlify.app/)
 
 ## Credits
 
@@ -10,6 +11,7 @@ Using Ghostwind template from [here](https://github.com/tailwindtoolbox/Ghostwin
 
 ## TODO
  [x] Create Header and Footer vue components
+ [ ] Implement internationalization (Spanish + English)
  [ ] Migrate backend to graphql+strawberry (django? flask?)
 
 

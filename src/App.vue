@@ -8,8 +8,6 @@
 </template>
 
 <script>
-// import BlogHome from './components/BlogHome.vue'
-
 export default {
   name: 'App'
 }
