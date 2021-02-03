@@ -85,7 +85,9 @@
         </div>
 
         <div class="flex items-center justify-center mt-12">
-          <a class="flex items-center text-gray-600 hover:underline hover:text-gray-500" href="https://dev.to/ambro17">
+          <a class="flex items-center text-gray-600 hover:underline hover:text-gray-500" 
+             href="https://dev.to/ambro17"
+             target="_blank">
             <span>View All Posts</span>
 
             <svg class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
