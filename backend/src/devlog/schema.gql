@@ -2,13 +2,35 @@ type Author {
   name: String!
 }
 
+type Me {
+  name: String!
+  intro: String!
+  about: String!
+}
+
 type Post {
   title: String!
   content: Int!
   author: Author!
 }
 
+type Project {
+  name: String!
+  description: String!
+  url: String!
+}
+
 type Query {
+  me: Me!
   posts: [Post!]!
   postById(id: String!): Post!
+  talks(id: String!): [Talk!]!
+  projects(id: String!): [Project!]!
+}
+
+type Talk {
+  title: String!
+  description: String!
+  tags: [String!]!
+  videoUrl: String!
 }
