@@ -10,7 +10,7 @@ type Me {
 
 type Post {
   title: String!
-  content: Int!
+  content: String!
   author: Author!
 }
 
@@ -24,7 +24,7 @@ type Query {
   me: Me!
   posts: [Post!]!
   postById(id: String!): Post!
-  talks(id: String!): [Talk!]!
+  talks: [Talk!]!
   projects(id: String!): [Project!]!
 }
 

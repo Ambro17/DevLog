@@ -19,7 +19,7 @@ class Author:
 @strawberry.type
 class Post:
     title: str
-    content: int
+    content: str
     author: Author
 
 
@@ -63,19 +63,26 @@ class Query:
 
     @strawberry.field
     def posts(self) -> List[Post]:
-        return [Post(title="Ambro", content='Lorem Ipsum')]
+        return [Post(title="Ambro", content='Lorem Ipsum', author=Author('Me'))]
 
     @strawberry.field
     def post_by_id(self, id: str) -> Post:
-        return Post(title="Ambro", content='Lorem Ipsum')
+        return Post(title="Ambro", content='Lorem Ipsum', author=Author('Me'))
 
     @strawberry.field
-    def talks(self, id: str) -> List[Talk]:
-        return [Talk(title='Pythonic APIs with GraphQL', description='', tags=[], video_url='')]
+    def talks(self) -> List[Talk]:
+        return [
+            Talk(
+                title='Pythonic APIs with GraphQL',
+                description='Build easy to use APIs with GraphQL',
+                tags=['Python', 'GraphQL', 'API', 'Design'],
+                video_url='https://www.youtube.com/watch?v=ePSRREuTZq4'
+            )
+        ]
 
     @strawberry.field
     def projects(self, id: str) -> List[Project]:
-        return [Project(name='Slackify', description='', url='https://github.com/Ambro17/slackify')]
+        return [Project(name='Slackify', description='Build modern slack bots', url='https://github.com/Ambro17/slackify')]
 
 
 schema = strawberry.Schema(query=Query)
