@@ -23,7 +23,7 @@ class Query:
 
     @strawberry.field
     def post_by_id(self, id: str) -> Post:
-        return [Post(title="Ambro", content='Lorem Ipsum')]
+        return Post(title="Ambro", content='Lorem Ipsum')
 
 
 schema = strawberry.Schema(query=Query)
