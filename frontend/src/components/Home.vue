@@ -38,7 +38,7 @@
       <div class="max-w-5xl px-6 mx-auto text-center">
         <h2 class="text-2xl font-semibold text-white">About Me</h2>
 
-        <p class="text-gray-400 mt-4">
+        <p class="text-gray-400 mt-10">
           I'm a software engineer who loves to work on complex problem domains,
           i'm a follower of Domain Driven Design (DDD) practices because i believe
           it helps to generate a synergic workflow between project owners and developers.<br>
@@ -76,12 +76,6 @@
             </div>
           </a>
 
-          <a class="mt-8 max-w-2xl w-full block bg-white shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" href="#">
-            <div class="flex items-center justify-between px-4 py-2">
-              <h3 class="text-lg font-medium text-gray-700">How GraphQL Made me fall in love with programming again</h3>
-              <span class="block text-gray-600 font-light text-sm">3 Oct 2019</span>
-            </div>
-          </a>
         </div>
 
         <div class="flex items-center justify-center mt-12">
@@ -138,7 +132,7 @@
               <a target="_blank" href="https://github.com/Ambro17/AmbroBot" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 <div class="py-2 px-3 text-center text-sm">
                   <p class="text-gray-300">AmbroBot</p>
-                  <span class="block text-gray-500 mt-2">🤖 Telegram bot to suit my needs</span>
+                  <span class="block text-gray-500 mt-2">🤖 Telegram bot to show series, subway status and a few other things</span>
                 </div>
               </a>
             </div>
@@ -149,31 +143,33 @@
 
     <section class="section-projects bg-gray-800 pattern pt-10 pb-20">
       <div class="max-w-5xl px-6 mx-auto text-center">
-        <h2 class="text-2xl font-semibold text-white">Talks</h2>
+        <h2 class="text-2xl font-semibold text-white">Public Talks</h2>
 
-        <div class="flex items-center justify-center mt-10">
+        <div class="flex items-center justify-center mt-10 mb-10">
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
             <div class="max-w-xs w-full">
               <div class="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
-                <img class="object-cover h-48" src="https://raw.githubusercontent.com/Ambro17/slackify/master/docs/logopro.svg" alt="">
+                <img class="object-cover h-48" src="https://i2.wp.com/gist.github.com/uttamukkoji/c9da31a439f3b31bcddba714cc424fcd/raw/e422e0902f00851ed4e4cf485aafac02a2423d12/RESTvsGraphQL.png" alt="">
               </div>
 
-              <a target="_blank" href="https://github.com/Ambro17/Slackify" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+              <a target="_blank" href="https://www.youtube.com/watch?v=FEl9C5Ui5OM" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 <div class="py-2 px-3 text-center text-sm">
-                  <p class="text-gray-300">One Talk</p>
-                  <span class="block text-gray-500 mt-2">Lorem Ipsum Bla</span>
+                  <p class="text-gray-300">GraphQL vs REST</p>
+                  <span class="block text-gray-400 mt-2">A comparison between two API paradigms</span>
+                  <span class="block text-gray-500 mt-2">@ Pyar Meetup July</span>
                 </div>
               </a>
             </div>
             <div class="max-w-xs w-full">
               <div class="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
-                <img class="object-cover h-48" src="https://raw.githubusercontent.com/Ambro17/slackify/master/docs/logopro.svg" alt="">
+                <img class="object-cover h-48" src="https://eventos.python.org.ar/media/images_thumbnails/gql.png.700x450_q85_box-108%2C0%2C1091%2C630_crop_detail.jpg" alt="">
               </div>
 
-              <a target="_blank" href="https://github.com/Ambro17/Slackify" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+              <a target="_blank" href="https://www.youtube.com/watch?v=ePSRREuTZq4" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 <div class="py-2 px-3 text-center text-sm">
-                  <p class="text-gray-300">Another Talk</p>
-                  <span class="block text-gray-500 mt-2">Lorem Ipsum Bla</span>
+                  <p class="text-gray-300">Pythonic APIs with GraphQL</p>
+                  <span class="block text-gray-400 mt-2">How to write easy to use APIs with GraphQL</span>
+                  <span class="block text-gray-500 mt-2">@ Pyconar 2020</span>
                 </div>
               </a>
             </div>
