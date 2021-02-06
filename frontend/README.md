@@ -12,7 +12,8 @@ Using Ghostwind template from [here](https://github.com/tailwindtoolbox/Ghostwin
 ## TODO
  [x] Create Header and Footer vue components
  [ ] Implement internationalization (Spanish + English)
- [ ] Migrate backend to graphql+strawberry (django? flask?)
+ [ ] Enable dark mode
+ [ ] Migrate data to use graphql+strawberry (django? flask?)
 
 
 ## Project setup
