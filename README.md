@@ -17,7 +17,7 @@ For the backend `make api` to open graphiql api explorer
 - [ ] Pythonic GraphQL APIs talk to text
 - [ ] GraphQL Schema Design in Spanish
 - [ ] Pyconar API Demonstration of strawberry vs REST
-- [ ] Chalice Infra
+- [ ] Infra as code with Chalice vs pulumi or serverles fwork
 - [ ] Slackify Why & How
 - [ ] Local Public Server with ngrok + compose
 - [ ] Opinión de Hasura
