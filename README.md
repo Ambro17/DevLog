@@ -22,6 +22,7 @@ For the backend `make api` to open graphiql api explorer
 - [ ] Local Public Server with ngrok + compose
 - [ ] Opinión de Hasura
 - [ ] No uses dynamodb a menos que quieras ser el nuevo Amazon.
+- [ ] Review de Production Ready GraphQL y Architecture patterns with python
 
 
 
