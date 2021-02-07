@@ -3,7 +3,7 @@
       <div class="container mx-auto px-6 py-4">
         <div class="flex justify-between items-center">
           <div>
-            <div class="text-gray-600 mr-4">Made with ❤ by Nahuel Ambrosini</div>
+            <div class="text-gray-600 mr-2">Made with ❤ by Nahuel Ambrosini</div>
           </div>
 
           <div class="flex items-center -mx-2">
