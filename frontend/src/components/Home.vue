@@ -6,6 +6,8 @@
     <section class="section-main bg-white mt-20">
       <div class="max-w-2xl px-6 text-center mx-auto">
         <h2 class="text-3xl font-semibold text-gray-800">Hi, <span class="bg-indigo-600 text-white rounded px-1">I’m Nahuel</span> . Nice to meet you.</h2>
+        <p>{{ $t('message') }}</p>
+        <p>{{ $t('nav.features') }}</p>
         <p class="text-gray-600 mt-4">
         I'm a software engineer who ❤ <b>Python</b> & <b>GraphQL.</b><br>
         📚 My programming interests are now mainly focused on<br>
