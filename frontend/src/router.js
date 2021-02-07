@@ -6,9 +6,15 @@ import BlogPost from "./components/BlogPost.vue";
 import BlogListing from "./components/BlogListing.vue";
 import i18n from "./i18n";
 
+
 Vue.use(VueRouter)
 
+
 const routes = [
+  {
+    path: '/',
+    redirect: `/${i18n.locale}`
+  },
   {
       path: '/:lang',
       component: {
