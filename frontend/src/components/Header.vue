@@ -2,6 +2,7 @@
     <header class="topbar bg-white shadow border-t-4 border-indigo-600">
       <div class="container mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
+          <!-- Left Side -->
           <div>
             <a class="flex items-center text-gray-800 hover:text-indigo-600" href="#">
               <svg class="h-6 w-6 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -10,6 +11,8 @@
               <span class="mx-3 font-medium text-sm md:text-base">Nahuel Ambrosini</span>
             </a>
           </div>
+
+          <!-- Right Side -->
           <div class="flex items-center -mx-2">
             <!-- Home -->
             <router-link :to="`/`" class="flex items-center mx-2 text-gray-800 hover:text-indigo-600">
@@ -23,9 +26,8 @@
               </svg>
             </router-link>
 
+            <!-- Posts -->
             <router-link :to="`/${$i18n.locale}/posts`" class="flex items-center mx-2 text-gray-800 hover:text-indigo-600">
-
-                <!-- Posts -->
                 <svg 
                   class="h-5 w-5 sm:h-6 sm:w-6" 
                   xmlns="http://www.w3.org/2000/svg"
@@ -37,6 +39,7 @@
                 </svg>
             </router-link>
 
+            <LangSwitcher />
 
             <a class="flex items-center mx-2 text-gray-800 hover:text-indigo-600" href="#">
               <svg class="h-5 w-5 sm:h-6 sm:w-6 fill-current" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
@@ -48,3 +51,11 @@
       </div>
     </header>
 </template>
+<script>
+import LangSwitcher from './LangSwitcher.vue'
+export default {
+    components: {
+      LangSwitcher
+    }
+}
+</script>
