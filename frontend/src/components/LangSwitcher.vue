@@ -1,5 +1,5 @@
 <template>
-  <div class="relative icons_button">
+  <div class="relative icons_button ml-1">
     <!-- Button -->
     <button
       href="#"
