@@ -6,23 +6,7 @@ The repo uses `vue.js` for the frontend
 and `Python+Flask+GraphQL` for the backend
 
 ## Development
-For the frontend `make frontend` to run the local server. See README for more details
+For the frontend, `make frontend` to run the local server.
 
-For the backend `make api` to open graphiql api explorer
-
-
-## Article Ideas:
-- [ ] Automatic Git Emojis for more readable commit history
-- [ ] Rest vs GraphQL talk to text
-- [ ] Pythonic GraphQL APIs talk to text
-- [ ] GraphQL Schema Design in Spanish
-- [ ] Pyconar API Demonstration of strawberry vs REST
-- [ ] Infra as code with Chalice vs pulumi or serverles fwork
-- [ ] Slackify Why & How
-- [ ] Local Public Server with ngrok + compose
-- [ ] Opinión de Hasura
-- [ ] No uses dynamodb a menos que quieras ser el nuevo Amazon.
-- [ ] Review de Production Ready GraphQL y Architecture patterns with python
-
-
+For the backend, `make api` to open graphiql api explorer
 
