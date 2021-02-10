@@ -1,6 +1,19 @@
 {
   "message": "hello i18n !!",
-  "nav": {
-    "features": "Features"
+  "home": {
+    "intro": {
+      "pre": {
+        "hi": "Hi",
+        "whoami": "I'm Nahuel",
+        "nice": "Nice to meet you"
+      },
+      "full_text": "I'm a software engineer who ❤ {tech1} {and} {tech2} {br} 📚 My programming interests are now mainly focused on {br} {interest1}, {interest2}, and {interest3} {br} 💼 I currently work at {onapsis_link} as a Sr Python Developer {br} And on my free time i like to go running or biking 🚴",
+      "tech1": "Python",
+      "and": "&",
+      "tech2": "GraphQL",
+      "interest1": "API Design",
+      "interest2": "Serverless Architectures",
+      "interest3": "DevOps"
+    }
   }
 }

@@ -5,23 +5,41 @@
     <Header />
     <section class="section-main bg-white mt-20">
       <div class="max-w-2xl px-6 text-center mx-auto">
-        <h2 class="text-3xl font-semibold text-gray-800">Hi, <span class="bg-indigo-600 text-white rounded px-1">I’m Nahuel</span> . Nice to meet you.</h2>
-        <p>{{ $t('message') }}</p>
-        <p>{{ $t('nav.features') }}</p>
-        <p class="text-gray-600 mt-4">
-        I'm a software engineer who ❤ <b>Python</b> & <b>GraphQL.</b><br>
-        📚 My programming interests are now mainly focused on<br>
-        <i>API Design</i>,
-        <i>Serverless Architectures</i>, 
-        <i>and DevOps</i><br>
-        💼 I currently work at 
-        <a 
-          class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-          href='https://onapsis.com/'
-          target="_blank">
-          Onapsis</a> as a Sr Python Developer<br>
-        And on my free time i like to learn Frontend development with Vue 🧪
-        </p>
+        <h2 class="text-3xl font-semibold text-gray-800">{{ $t('home.intro.pre.hi') }}, <span class="bg-indigo-600 text-white rounded px-1">{{ $t('home.intro.pre.whoami') }}</span> . {{ $t('home.intro.pre.nice') }}</h2>
+
+        <i18n path="home.intro.full_text" tag="p" class="text-gray-600 mt-4">
+          <template #br>
+            <br>
+          </template>
+          <template #tech1>
+            <b>{{ $t('home.intro.tech1') }}</b>
+          </template>
+          <template #and>
+            {{ $t('home.intro.and') }}
+          </template>
+          <template #tech2>
+            <b>{{ $t('home.intro.tech2') }}</b>
+          </template>
+          <template #interest1>
+            <i>{{ $t('home.intro.interest1') }}</i>
+          </template>
+          <template #interest2>
+            <i>{{ $t('home.intro.interest2') }}</i>
+          </template>
+          <template #interest3>
+            <i>{{ $t('home.intro.interest3') }}</i>
+          </template>
+          <template #onapsis_link>
+            <a 
+              class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+              href='https://onapsis.com/'
+              target="_blank">
+              Onapsis
+            </a>
+          </template>
+        </i18n>
+
+
         <div class="flex items-end justify-center mt-12 mb-10">
           <div class="w-48 h-48 relative mb-6">
             <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
@@ -182,8 +200,8 @@
       </div>
     </section>
 
-
     <Footer />
+
   </div>
 </main>
 </template>
