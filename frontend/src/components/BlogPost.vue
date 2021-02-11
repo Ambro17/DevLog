@@ -1,5 +1,5 @@
 <template>
-  <body class="bg-white font-sans leading-normal tracking-normal">
+  <div class="bg-white font-sans leading-normal tracking-normal">
 
     <!--Nav-->
     <Header />   
@@ -133,7 +133,7 @@
       <Footer />
 
     </div>
-  </body>
+  </div>
 </template>
 
 <script>
