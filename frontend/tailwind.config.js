@@ -4,6 +4,9 @@ module.exports = {
       './src/**/*.html',
       './src/**/*.vue',
     ],
+    future: {
+      purgeLayersByDefault: true,
+    },
     theme: {},
     variants: {},
     plugins: [],
