@@ -14,6 +14,17 @@
       "interest1": "Diseño de APIs",
       "interest2": "Arquitecturas Serverless",
       "interest3": "DevOps"
+    },
+    "about": {
+      "header": "Bio",
+      "pre": "Soy un ingeniero en software que disfruta resolver problemas en dominios complejos, soy seguidor de las prácticas de diseño orientado al dominio (DDD en inglés) porque creo que contribuye a generar una sinergia entre desarrolladores y representantes del negocio.",
+      "post": "Considero que tener un amplio conocimiento del negocio y un buen sistema de información son pilares fundamentales para entregar software de calidad, flexible a cambios, y con tiempos de entrega predecibles."
     }
-  }
+  },
+  "posts_header": "Últimos Artículos",
+  "projects": "Proyectos",
+  "talks": "Charlas",
+  "view_all_posts": "Ver más",
+  "made_by": "Hecho con ❤ por Nahuel Ambrosini",
+  "donate": "Donar ☕"
 }

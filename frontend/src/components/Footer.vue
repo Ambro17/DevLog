@@ -3,7 +3,7 @@
       <div class="container mx-auto px-6 py-4">
         <div class="flex justify-between items-center">
           <div>
-            <div class="text-sm text-gray-600 mr-2">Made with ❤ by Nahuel Ambrosini</div>
+            <div class="text-sm text-gray-600 mr-2"> {{ $t('made_by') }} </div>
           </div>
 
           <div class="flex items-center -mx-2">
@@ -12,7 +12,7 @@
                 type="application/javascript" defer 
                 src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
                 data-preference-id="143169574-8f08f596-4758-43fb-8ee7-5390b05a2909"
-                data-button-label="Donate ☕">
+                :data-button-label="`${$t('donate')}`">
               </script>
             </div>
           </div>

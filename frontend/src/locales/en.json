@@ -14,6 +14,17 @@
       "interest1": "API Design",
       "interest2": "Serverless Architectures",
       "interest3": "DevOps"
+    },
+    "about": {
+      "header": "About Me",
+      "pre": "I'm a software engineer who loves to work on complex problem domains,\ni'm a follower of Domain Driven Design (DDD) practices because i believe\nit helps to generate a synergic workflow between project owners and developers.",
+      "post": "I'm convinced that having a deep domain knowledge and a good communication system helps delivering\nhigh quality software, that's flexible to changes, and has predictable delivery times."
     }
-  }
+  },
+  "posts_header": "Latest Posts",
+  "projects": "Projects",
+  "talks": "Public Talks",
+  "view_all_posts": "View All Posts",
+  "made_by": "Made with ❤ by Nahuel Ambrosini",
+  "donate": "Donate ☕"
 }
