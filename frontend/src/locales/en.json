@@ -1,0 +1,30 @@
+{
+  "message": "hello i18n !!",
+  "home": {
+    "intro": {
+      "pre": {
+        "hi": "Hi",
+        "whoami": "I'm Nahuel",
+        "nice": "Nice to meet you"
+      },
+      "full_text": "I'm a software engineer who ❤ {tech1} {and} {tech2} {br} 📚 My programming interests are now mainly focused on {br} {interest1}, {interest2}, and {interest3} {br} 💼 I currently work at {onapsis_link} as a Sr Python Developer {br} And on my free time i like to go running or biking 🚴",
+      "tech1": "Python",
+      "and": "&",
+      "tech2": "GraphQL",
+      "interest1": "API Design",
+      "interest2": "Serverless Architectures",
+      "interest3": "DevOps"
+    },
+    "about": {
+      "header": "About Me",
+      "pre": "I'm a software engineer who loves to work on complex problem domains,\ni'm a follower of Domain Driven Design (DDD) practices because i believe\nit helps to generate a synergic workflow between project owners and developers.",
+      "post": "I'm convinced that having a deep domain knowledge and a good communication system helps delivering\nhigh quality software, that's flexible to changes, and has predictable delivery times."
+    }
+  },
+  "posts_header": "Latest Posts",
+  "projects": "Projects",
+  "talks": "Public Talks",
+  "view_all_posts": "View All Posts",
+  "made_by": "Made with ❤ by Nahuel Ambrosini",
+  "donate": "Donate ☕"
+}

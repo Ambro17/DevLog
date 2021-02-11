@@ -5,21 +5,41 @@
     <Header />
     <section class="section-main bg-white mt-20">
       <div class="max-w-2xl px-6 text-center mx-auto">
-        <h2 class="text-3xl font-semibold text-gray-800">Hi, <span class="bg-indigo-600 text-white rounded px-1">I’m Nahuel</span> . Nice to meet you.</h2>
-        <p class="text-gray-600 mt-4">
-        I'm a software engineer who ❤ <b>Python</b> & <b>GraphQL.</b><br>
-        📚 My programming interests are now mainly focused on<br>
-        <i>API Design</i>,
-        <i>Serverless Architectures</i>, 
-        <i>and DevOps</i><br>
-        💼 I currently work at 
-        <a 
-          class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-          href='https://onapsis.com/'
-          target="_blank">
-          Onapsis</a> as a Sr Python Developer<br>
-        And on my free time i like to learn Frontend development with Vue 🧪
-        </p>
+        <h2 class="text-3xl font-semibold text-gray-800">{{ $t('home.intro.pre.hi') }}, <span class="bg-indigo-600 text-white rounded px-1">{{ $t('home.intro.pre.whoami') }}</span> . {{ $t('home.intro.pre.nice') }}</h2>
+
+        <i18n path="home.intro.full_text" tag="p" class="text-gray-600 mt-4">
+          <template #br>
+            <br>
+          </template>
+          <template #tech1>
+            <b>{{ $t('home.intro.tech1') }}</b>
+          </template>
+          <template #and>
+            {{ $t('home.intro.and') }}
+          </template>
+          <template #tech2>
+            <b>{{ $t('home.intro.tech2') }}</b>
+          </template>
+          <template #interest1>
+            <i>{{ $t('home.intro.interest1') }}</i>
+          </template>
+          <template #interest2>
+            <i>{{ $t('home.intro.interest2') }}</i>
+          </template>
+          <template #interest3>
+            <i>{{ $t('home.intro.interest3') }}</i>
+          </template>
+          <template #onapsis_link>
+            <a 
+              class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+              href='https://onapsis.com/'
+              target="_blank">
+              Onapsis
+            </a>
+          </template>
+        </i18n>
+
+
         <div class="flex items-end justify-center mt-12 mb-10">
           <div class="w-48 h-48 relative mb-6">
             <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
@@ -36,42 +56,39 @@
 
     <section class="section-secondary bg-gray-800 pattern py-20">
       <div class="max-w-5xl px-6 mx-auto text-center">
-        <h2 class="text-2xl font-semibold text-white">About Me</h2>
+        <h2 class="text-2xl font-semibold text-white">{{ $t('home.about.header') }}</h2>
 
         <p class="text-gray-400 mt-10">
-          I'm a software engineer who loves to work on complex problem domains,
-          i'm a follower of Domain Driven Design (DDD) practices because i believe
-          it helps to generate a synergic workflow between project owners and developers.<br>
-          Having a deep domain knowledge and a good communication system helps delivering
-          high quality software, flexible to changes, with predictable delivery times.
- 
+          {{ $t('home.about.pre') }}
+          <br>
+          {{ $t('home.about.post') }}
         </p>
       </div>
     </section>
 
     <section class="section-posts bg-white py-20">
       <div class="max-w-5xl px-6 mx-auto text-center">
-        <h2 class="text-2xl font-semibold text-gray-800">Latest Posts</h2>
+        <h2 class="text-2xl font-semibold text-gray-800">{{ $t('posts_header') }}</h2>
 
         <div class="flex flex-col items-center justify-center mt-6">
           <a class="max-w-2xl w-full block bg-white shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" 
              href="#">
             <div class="flex items-center justify-between px-4 py-2">
-              <h3 class="text-lg font-medium text-gray-700">Why i Love GraphQL</h3>
+              <h3 class="text-lg text-center font-medium text-gray-700">Why i use emojis in all my git commits 🙌</h3>
               <span class="block text-gray-600 font-light text-sm">20 Jan 2020</span>
             </div>
           </a>
 
           <a class="mt-8 max-w-2xl w-full block bg-white shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" href="#">
             <div class="flex items-center justify-between px-4 py-2">
-              <h3 class="text-lg font-medium text-gray-700">DDD, GraphQL and Good API Design</h3>
+              <h3 class="text-lg font-medium text-gray-700">Direnv: Automate your environment variables handling 🗜️</h3>
               <span class="block text-gray-600 font-light text-sm">29 Oct 2019</span>
             </div>
           </a>
 
           <a class="mt-8 max-w-2xl w-full block bg-white shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" href="#">
             <div class="flex items-center justify-between px-4 py-2">
-              <h3 class="text-lg font-medium text-gray-700">Strawberry: The best approach to GraphQL Schema Design</h3>
+              <h3 class="text-lg font-medium text-gray-700">Strawberry: The best approach to GraphQL Schema Design 🍓</h3>
               <span class="block text-gray-600 font-light text-sm">15 Oct 2019</span>
             </div>
           </a>
@@ -82,7 +99,7 @@
           <a class="flex items-center text-gray-600 hover:underline hover:text-gray-500" 
              href="https://dev.to/ambro17"
              target="_blank">
-            <span>View All Posts</span>
+            <span>{{ $t('view_all_posts') }}</span>
 
             <svg class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -94,7 +111,7 @@
 
     <section class="section-projects bg-gray-800 pattern pt-20 pb-10">
       <div class="max-w-5xl px-6 mx-auto text-center">
-        <h2 class="text-2xl font-semibold text-white">Projects</h2>
+        <h2 class="text-2xl font-semibold text-white">{{ $t('projects') }}</h2>
 
         <div class="flex items-center justify-center mt-10">
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -143,7 +160,7 @@
 
     <section class="section-projects bg-gray-800 pattern pt-10 pb-20">
       <div class="max-w-5xl px-6 mx-auto text-center">
-        <h2 class="text-2xl font-semibold text-white">Public Talks</h2>
+        <h2 class="text-2xl font-semibold text-white">{{ $t('talks') }}</h2>
 
         <div class="flex items-center justify-center mt-10 mb-10">
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
@@ -180,8 +197,8 @@
       </div>
     </section>
 
-
     <Footer />
+
   </div>
 </main>
 </template>

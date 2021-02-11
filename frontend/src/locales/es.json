@@ -1,0 +1,30 @@
+{
+  "message": "hello i18n !!",
+  "home": {
+    "intro": {
+      "pre": {
+        "hi": "Hola",
+        "whoami": "Soy Nahuel",
+        "nice": "Un gusto conocerte"
+      },
+      "full_text": "Soy un ingeniero en software que ❤ {tech1} {and} {tech2} {br} 📚 Mis intereses hoy en día rondan principalmente sobre {br} {interest1}, {interest2}, y {interest3} {br} 💼 Actualmente trabajo en {onapsis_link} como Sr Python Developer {br} En mi tiempo libre me gusta correr y andar en bicicleta 🚴",
+      "tech1": "Python",
+      "and": "y",
+      "tech2": "GraphQL",
+      "interest1": "Diseño de APIs",
+      "interest2": "Arquitecturas Serverless",
+      "interest3": "DevOps"
+    },
+    "about": {
+      "header": "Bio",
+      "pre": "Soy un ingeniero en software que disfruta resolver problemas en dominios complejos, soy seguidor de las prácticas de diseño orientado al dominio (DDD en inglés) porque creo que contribuye a generar una sinergia entre desarrolladores y representantes del negocio.",
+      "post": "Considero que tener un amplio conocimiento del negocio y un buen sistema de información son pilares fundamentales para entregar software de calidad, flexible a cambios, y con tiempos de entrega predecibles."
+    }
+  },
+  "posts_header": "Últimos Artículos",
+  "projects": "Proyectos",
+  "talks": "Charlas",
+  "view_all_posts": "Ver más",
+  "made_by": "Hecho con ❤ por Nahuel Ambrosini",
+  "donate": "Donar ☕"
+}
