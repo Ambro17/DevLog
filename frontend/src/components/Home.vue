@@ -1,4 +1,5 @@
 <template>
+
 <main class="font-sans bg-white">
   <div>
     <!-- Header -->
@@ -200,6 +201,7 @@
 
   </div>
 </main>
+
 </template>
 
 <style>
