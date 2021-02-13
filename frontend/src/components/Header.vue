@@ -12,6 +12,8 @@
             </a>
           </div>
 
+          <DarkModeSwitcher />
+
           <!-- Right Side -->
           <div class="flex items-center -mx-2">
             <!-- Home -->
@@ -53,9 +55,12 @@
 </template>
 <script>
 import LangSwitcher from './LangSwitcher.vue'
+import DarkModeSwitcher from './DarkModeSwitcher.vue'
+
 export default {
     components: {
-      LangSwitcher
+      LangSwitcher,
+      DarkModeSwitcher
     }
 }
 </script>

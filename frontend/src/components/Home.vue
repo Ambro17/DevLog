@@ -39,7 +39,6 @@
           </template>
         </i18n>
 
-
         <div class="flex items-end justify-center mt-12 mb-10">
           <div class="w-48 h-48 relative mb-6">
             <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
