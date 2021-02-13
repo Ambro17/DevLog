@@ -15,20 +15,20 @@
     width: 1.25rem;
     height: 1.25rem;
     border-radius: 50%;
-    top: 0;
-    left: 0;
+    top: -0.05rem;
+    left: 0.4rem;
     transform: scale(0.7);
-    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.2);
-    background-color: white;
+    box-shadow: -0.5rem 0.1rem #fff;
+    background-color: transparent;
     transition: .2s ease-in-out;
   }
 
   input:checked {
     @apply: bg-indigo-400;
-    background-color:#7f9cf5;
+    background-color: #312E81;
   }
 
   input:checked:before {
-    left: 1.25rem;
+    left: 1.45rem;
   }
 </style>
