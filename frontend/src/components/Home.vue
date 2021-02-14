@@ -4,7 +4,9 @@
   <div>
     <!-- Header -->
     <Header />
-    <section class="section-main bg-white mt-20">
+
+    <!-- Intro -->
+    <section class="section-main bg-white border-t-20 border-white">
       <div class="max-w-2xl px-6 text-center mx-auto">
         <h2 class="text-3xl font-semibold text-gray-800">{{ $t('home.intro.pre.hi') }}, <span class="bg-indigo-600 text-white rounded px-1">{{ $t('home.intro.pre.whoami') }}</span> . {{ $t('home.intro.pre.nice') }}</h2>
 
@@ -54,6 +56,7 @@
       </div>
     </section>
 
+    <!-- About -->
     <section class="section-secondary bg-gray-800 pattern py-20">
       <div class="max-w-5xl px-6 mx-auto text-center">
         <h2 class="text-2xl font-semibold text-white">{{ $t('home.about.header') }}</h2>
@@ -66,6 +69,7 @@
       </div>
     </section>
 
+    <!-- Posts -->
     <section class="section-posts bg-white py-20">
       <div class="max-w-5xl px-6 mx-auto text-center">
         <h2 class="text-2xl font-semibold text-gray-800">{{ $t('posts_header') }}</h2>
@@ -109,6 +113,7 @@
       </div>
     </section>
 
+    <!-- Project -->
     <section class="section-projects bg-gray-800 pattern pt-20 pb-10">
       <div class="max-w-5xl px-6 mx-auto text-center">
         <h2 class="text-2xl font-semibold text-white">{{ $t('projects') }}</h2>
@@ -158,6 +163,7 @@
       </div>
     </section>
 
+    <!-- Talks -->
     <section class="section-projects bg-gray-800 pattern pt-10 pb-20">
       <div class="max-w-5xl px-6 mx-auto text-center">
         <h2 class="text-2xl font-semibold text-white">{{ $t('talks') }}</h2>
