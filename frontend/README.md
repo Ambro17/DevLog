@@ -13,6 +13,7 @@ Using Ghostwind template from [here](https://github.com/tailwindtoolbox/Ghostwin
  [x] Create Header and Footer vue components
  [x] Implement internationalization (Spanish + English)
  [ ] Enable dark mode
+ [ ] Improve site performance with lighthouse
  [ ] Migrate data to use graphql+strawberry (django? flask?)
 
 
