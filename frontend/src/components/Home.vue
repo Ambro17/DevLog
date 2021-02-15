@@ -5,8 +5,13 @@
     <!-- Header -->
     <Header />
 
-    <!-- Intro -->
-    <section class="section-main bg-white border-t-20 border-white">
+    <!-- Lead Intro -->
+    <section class="
+      section-main 
+      bg-white 
+      border-t-80 
+      border-white"
+    >
       <div class="max-w-2xl px-6 text-center mx-auto">
         <h2 class="text-3xl font-semibold text-gray-800">{{ $t('home.intro.pre.hi') }}, <span class="bg-indigo-600 text-white rounded px-1">{{ $t('home.intro.pre.whoami') }}</span> . {{ $t('home.intro.pre.nice') }}</h2>
 
@@ -69,7 +74,7 @@
       </div>
     </section>
 
-    <!-- Posts -->
+    <!-- Latest Posts -->
     <section class="section-posts bg-white py-20">
       <div class="max-w-5xl px-6 mx-auto text-center">
         <h2 class="text-2xl font-semibold text-gray-800">{{ $t('posts_header') }}</h2>
@@ -203,6 +208,7 @@
       </div>
     </section>
 
+    <!-- Footer -->
     <Footer />
 
   </div>
