@@ -17,6 +17,9 @@ Using Ghostwind template from [here](https://github.com/tailwindtoolbox/Ghostwin
  [ ] Improve site performance with lighthouse
  [ ] Migrate data to use graphql+strawberry (django? flask?)
 
+## Hacks
+ [ ] Replace margin with div and border bottom to create extended space with background color
+
 
 ## Project setup
 Install nvm to manage node & npm versions
