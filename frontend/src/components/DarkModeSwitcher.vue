@@ -1,7 +1,7 @@
 <template>
 <label class="dark-mode-switcher flex items-center ml-1">
   <!-- Icon -->
-  <a class="flex items-center text-gray-800 hover:text-indigo-600" href="#">
+  <a class="flex items-center text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-500" href="#">
     <svg 
       class="h-6 w-6 sm:h-6 sm:w-6"
       xmlns="http://www.w3.org/2000/svg" 
