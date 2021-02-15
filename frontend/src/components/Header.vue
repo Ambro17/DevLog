@@ -15,11 +15,12 @@
           <!-- Left Side -->
           <div>
             <a class="
+              nahuel-ambrosini-text
               flex items-center 
               text-gray-800 
               dark:text-gray-100 
               hover:text-indigo-600 
-              dark:hover:text-indigo-500" href="#"
+              dark:hover:text-indigo-400" href="#"
             >
               <svg class="h-6 w-6 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
@@ -81,7 +82,9 @@
           spacer-between-header-and-about 
           border-b-2
           shadow-lg
-          border-gray"
+          border-gray
+          dark:border-gray-700
+          "
       />
     </header>
 </template>

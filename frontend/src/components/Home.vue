@@ -8,14 +8,27 @@
     <!-- Lead Intro -->
     <section class="
       section-main 
-      bg-white 
-      border-t-80 
-      border-white"
+      bg-white
+      dark:bg-gray-900
+      border-t-80
+      border-white
+      dark:border-gray-900
+      "
     >
       <div class="max-w-2xl px-6 text-center mx-auto">
-        <h2 class="text-3xl font-semibold text-gray-800">{{ $t('home.intro.pre.hi') }}, <span class="bg-indigo-600 text-white rounded px-1">{{ $t('home.intro.pre.whoami') }}</span> . {{ $t('home.intro.pre.nice') }}</h2>
+        <h2 
+          class="text-3xl font-semibold text-gray-800 dark:text-gray-50">
+          {{ $t('home.intro.pre.hi') }}, 
+          <span class="
+            bg-indigo-600 
+            dark:bg-indigo-500 
+            text-white 
+            rounded px-1"
+          >{{ $t('home.intro.pre.whoami') }}</span> .
+            {{ $t('home.intro.pre.nice') }}
+        </h2>
 
-        <i18n path="home.intro.full_text" tag="p" class="text-gray-600 mt-4">
+        <i18n path="home.intro.full_text" tag="p" class="text-gray-600 dark:text-gray-50 mt-4">
           <template #br>
             <br>
           </template>
@@ -39,15 +52,21 @@
           </template>
           <template #onapsis_link>
             <a 
-              class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+              class="
+                underline 
+                text-blue-600 
+                dark:text-gray-100 
+                hover:text-blue-800 
+                dark:hover:text-indigo-500 
+                visited:text-purple-600
+              "
               href='https://onapsis.com/'
-              target="_blank">
-              Onapsis
-            </a>
+              target="_blank"
+            >Onapsis</a>
           </template>
         </i18n>
 
-        <div class="flex items-end justify-center mt-12 mb-10">
+        <div class="flex items-end justify-center mt-12">
           <div class="w-48 h-48 relative mb-6">
             <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
               <img 
@@ -59,14 +78,21 @@
           </div>
         </div>
       </div>
+      <!-- Extra Div to mimic a background-colorable mb-10-->
+      <div class="
+        fake-margin-bottom-20 
+        border-b-80
+        border-white
+        dark:border-gray-900">
+      </div>
     </section>
 
     <!-- About -->
-    <section class="section-secondary bg-gray-800 pattern py-20">
+    <section class="section-secondary bg-gray-800 dark:bg-gray-900 pattern py-20">
       <div class="max-w-5xl px-6 mx-auto text-center">
         <h2 class="text-2xl font-semibold text-white">{{ $t('home.about.header') }}</h2>
 
-        <p class="text-gray-400 mt-10">
+        <p class="text-gray-400 dark:text-gray-200 mt-10">
           {{ $t('home.about.pre') }}
           <br>
           {{ $t('home.about.post') }}
@@ -75,9 +101,9 @@
     </section>
 
     <!-- Latest Posts -->
-    <section class="section-posts bg-white py-20">
+    <section class="section-posts bg-white dark:bg-gray-900 py-20">
       <div class="max-w-5xl px-6 mx-auto text-center">
-        <h2 class="text-2xl font-semibold text-gray-800">{{ $t('posts_header') }}</h2>
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-gray-100">{{ $t('posts_header') }}</h2>
 
         <div class="flex flex-col items-center justify-center mt-6">
           <a class="max-w-2xl w-full block bg-white shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" 
@@ -105,7 +131,7 @@
         </div>
 
         <div class="flex items-center justify-center mt-12">
-          <a class="flex items-center text-gray-600 hover:underline hover:text-gray-500" 
+          <a class="flex items-center text-gray-600 dark:text-gray-100 hover:underline hover:text-gray-500 dark:hover:text-indigo-500" 
              href="https://dev.to/ambro17"
              target="_blank">
             <span>{{ $t('view_all_posts') }}</span>
@@ -119,7 +145,7 @@
     </section>
 
     <!-- Project -->
-    <section class="section-projects bg-gray-800 pattern pt-20 pb-10">
+    <section class="section-projects bg-gray-800 dark:bg-gray-900 pattern pt-20 pb-10">
       <div class="max-w-5xl px-6 mx-auto text-center">
         <h2 class="text-2xl font-semibold text-white">{{ $t('projects') }}</h2>
 
@@ -169,7 +195,7 @@
     </section>
 
     <!-- Talks -->
-    <section class="section-projects bg-gray-800 pattern pt-10 pb-20">
+    <section class="section-projects bg-gray-800 dark:bg-gray-900 pattern pt-10 pb-20">
       <div class="max-w-5xl px-6 mx-auto text-center">
         <h2 class="text-2xl font-semibold text-white">{{ $t('talks') }}</h2>
 
