@@ -106,25 +106,25 @@
         <h2 class="text-2xl font-semibold text-gray-800 dark:text-gray-100">{{ $t('posts_header') }}</h2>
 
         <div class="flex flex-col items-center justify-center mt-6">
-          <a class="max-w-2xl w-full block bg-white shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" 
+          <a class="max-w-2xl w-full block bg-white dark:bg-gray-700 shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" 
              href="#">
             <div class="flex items-center justify-between px-4 py-2">
-              <h3 class="text-lg text-center font-medium text-gray-700">Why i use emojis in all my git commits 🙌</h3>
-              <span class="block text-gray-600 font-light text-sm">20 Jan 2020</span>
+              <h3 class="text-lg text-center font-medium text-gray-700 dark:text-gray-300">Why i use emojis in all my git commits 🙌</h3>
+              <span class="block text-gray-600 dark:text-gray-100 font-light text-sm">20 Jan 2020</span>
             </div>
           </a>
 
-          <a class="mt-8 max-w-2xl w-full block bg-white shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" href="#">
+          <a class="mt-8 max-w-2xl w-full block bg-white dark:bg-gray-700 shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" href="#">
             <div class="flex items-center justify-between px-4 py-2">
-              <h3 class="text-lg font-medium text-gray-700">Direnv: Automate your environment variables handling 🗜️</h3>
-              <span class="block text-gray-600 font-light text-sm">29 Oct 2019</span>
+              <h3 class="text-lg font-medium text-gray-700 dark:text-gray-300">Direnv: Automate your environment variables handling 🗜️</h3>
+              <span class="block text-gray-600 dark:text-gray-100 font-light text-sm">29 Oct 2019</span>
             </div>
           </a>
 
-          <a class="mt-8 max-w-2xl w-full block bg-white shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" href="#">
+          <a class="mt-8 max-w-2xl w-full block bg-white dark:bg-gray-700 shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" href="#">
             <div class="flex items-center justify-between px-4 py-2">
-              <h3 class="text-lg font-medium text-gray-700">Strawberry: The best approach to GraphQL Schema Design 🍓</h3>
-              <span class="block text-gray-600 font-light text-sm">15 Oct 2019</span>
+              <h3 class="text-lg font-medium text-gray-700 dark:text-gray-300">Strawberry: The best approach to GraphQL Schema Design 🍓</h3>
+              <span class="block text-gray-600 dark:text-gray-100 font-light text-sm">15 Oct 2019</span>
             </div>
           </a>
 
@@ -152,40 +152,48 @@
         <div class="flex items-center justify-center mt-10">
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <div class="max-w-xs w-full">
-              <div class="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
+              <div class="flex items-center justify-center h-56 
+                border-b-8 
+                rounded-md 
+                overflow-hidden
+                bg-white 
+                dark:bg-gray-800 
+                border-teal-400 
+                dark:border-gray-800"
+              >
                 <img class="object-cover h-48" src="https://raw.githubusercontent.com/Ambro17/slackify/master/docs/logopro.svg" alt="">
               </div>
 
               <a target="_blank" href="https://github.com/Ambro17/Slackify" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 <div class="py-2 px-3 text-center text-sm">
-                  <p class="text-gray-300">🚀 Slackify</p>
-                  <span class="block text-gray-500 mt-2">Lightweight framework to develop modern Slack bots.</span>
+                  <p class="text-gray-300 dark:text-gray-100">🚀 Slackify</p>
+                  <span class="block text-gray-500 dark:text-gray-300 mt-2">Lightweight framework to develop modern Slack bots.</span>
                 </div>
               </a>
             </div>
 
             <div class="max-w-xs w-full">
-              <div class="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
+              <div class="flex items-center justify-center h-56 bg-white dark:bg-gray-800 border-b-8 border-teal-400 dark:border-gray-800 rounded-md overflow-hidden">
                 <img class="object-cover h-34" src="https://raw.githubusercontent.com/Ambro17/graphql-schema-diff/master/images/logo.svg?sanitize=true" alt="">
               </div>
 
               <a target="_blank" href="https://github.com/Ambro17/graphql-schema-diff" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 <div class="py-2 px-3 text-center text-sm">
-                  <p class="text-gray-300">🔎 GraphQL Schema Diff</p>
-                  <span class="block text-gray-500 mt-2">Compare GraphQL Schemas to detect breaking changes</span>
+                  <p class="text-gray-300 dark:text-gray-100">🔎 GraphQL Schema Diff</p>
+                  <span class="block text-gray-500 dark:text-gray-300 mt-2">Compare GraphQL Schemas to detect breaking changes</span>
                 </div>
               </a>
             </div>
 
             <div class="max-w-xs w-full">
-              <div class="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
+              <div class="flex items-center justify-center h-56 bg-white dark:bg-gray-800 border-b-8 border-teal-400 dark:border-gray-800 rounded-md overflow-hidden">
                 <img class="object-cover h-48" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="">
               </div>
 
               <a target="_blank" href="https://github.com/Ambro17/AmbroBot" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 <div class="py-2 px-3 text-center text-sm">
-                  <p class="text-gray-300">AmbroBot</p>
-                  <span class="block text-gray-500 mt-2">🤖 Telegram bot to show series, subway status and a few other things</span>
+                  <p class="text-gray-300 dark:text-gray-100">AmbroBot</p>
+                  <span class="block text-gray-500 dark:text-gray-300 mt-2">🤖 Telegram bot to show series, subway status and a few other things</span>
                 </div>
               </a>
             </div>
@@ -202,28 +210,28 @@
         <div class="flex items-center justify-center mt-10 mb-10">
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
             <div class="max-w-xs w-full">
-              <div class="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
+              <div class="flex items-center justify-center h-56 bg-white dark:bg-gray-800 border-b-8 border-teal-400 dark:border-gray-800 rounded-md overflow-hidden">
                 <img class="object-cover h-48" src="https://i2.wp.com/gist.github.com/uttamukkoji/c9da31a439f3b31bcddba714cc424fcd/raw/e422e0902f00851ed4e4cf485aafac02a2423d12/RESTvsGraphQL.png" alt="">
               </div>
 
               <a target="_blank" href="https://www.youtube.com/watch?v=FEl9C5Ui5OM" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 <div class="py-2 px-3 text-center text-sm">
-                  <p class="text-gray-300">GraphQL vs REST</p>
-                  <span class="block text-gray-400 mt-2">A comparison between two API paradigms</span>
-                  <span class="block text-gray-500 mt-2">@ Pyar Meetup July</span>
+                  <p class="text-gray-300 dark:text-gray-100">GraphQL vs REST</p>
+                  <span class="block text-gray-400 dark:text-gray-300 mt-2">A comparison between two API paradigms</span>
+                  <span class="block text-gray-500 dark:text-gray-400 mt-2">@ Pyar Meetup July</span>
                 </div>
               </a>
             </div>
             <div class="max-w-xs w-full">
-              <div class="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
+              <div class="flex items-center justify-center h-56 bg-white dark:bg-gray-800 border-b-8 border-teal-400 dark:border-gray-800 rounded-md overflow-hidden">
                 <img class="object-cover h-48" src="https://eventos.python.org.ar/media/images_thumbnails/gql.png.700x450_q85_box-108%2C0%2C1091%2C630_crop_detail.jpg" alt="">
               </div>
 
               <a target="_blank" href="https://www.youtube.com/watch?v=ePSRREuTZq4" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 <div class="py-2 px-3 text-center text-sm">
-                  <p class="text-gray-300">Pythonic APIs with GraphQL</p>
-                  <span class="block text-gray-400 mt-2">How to write easy to use APIs with GraphQL</span>
-                  <span class="block text-gray-500 mt-2">@ Pyconar 2020</span>
+                  <p class="text-gray-300 dark:text-gray-100">Pythonic APIs with GraphQL</p>
+                  <span class="block text-gray-400 dark:text-gray-300 mt-2">How to write easy to use APIs with GraphQL</span>
+                  <span class="block text-gray-500 dark:text-gray-400 mt-2">@ Pyconar 2020</span>
                 </div>
               </a>
             </div>
