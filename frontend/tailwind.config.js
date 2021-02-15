@@ -11,7 +11,7 @@ module.exports = {
         '2': '2px',
         '4': '4px',
         '8': '8px',
-        '20': '20px',
+        '80': '3rem',
       }
     },
     variants: {},
