@@ -69,7 +69,7 @@
             </router-link>
 
             <!-- Lang switcher -->
-            <LangSwitcher />
+            <LanguageSwitcher />
 
             <!-- Dark Mode Toggle -->
             <DarkModeSwitcher />
@@ -89,12 +89,12 @@
     </header>
 </template>
 <script>
-import LangSwitcher from './LangSwitcher.vue'
+import LanguageSwitcher from './LanguageSwitcher.vue'
 import DarkModeSwitcher from './DarkModeSwitcher.vue'
 
 export default {
     components: {
-      LangSwitcher,
+      LanguageSwitcher,
       DarkModeSwitcher
     }
 }
