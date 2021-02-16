@@ -2,7 +2,7 @@
 My Personal Blog
 
 ## Tech Stack
-The repo uses `vue.js` for the frontend
+The repo uses `vue+tailwind` for the frontend
 and `Python+Flask+GraphQL` for the backend
 
 ## Development
