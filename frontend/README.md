@@ -11,9 +11,14 @@ Using Ghostwind template from [here](https://github.com/tailwindtoolbox/Ghostwin
 
 ## TODO
  [x] Create Header and Footer vue components
- [ ] Implement internationalization (Spanish + English)
- [ ] Enable dark mode
+ [x] Implement internationalization (Spanish + English)
+ [x] Enable dark mode
+ [ ] Improvement: Use flag images instead of emojis to have consistent ui over different fonts
+ [ ] Improve site performance with lighthouse
  [ ] Migrate data to use graphql+strawberry (django? flask?)
+
+## Hacks
+ [ ] Replace margin with div and border bottom to create extended space with background color
 
 
 ## Project setup

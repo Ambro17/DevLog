@@ -1,9 +1,16 @@
 <template>
-    <footer class="bg-white">
+    <footer class="
+      bg-white 
+      dark:bg-gray-800 
+      border-t-2
+      border-gray-900
+      dark:border-gray-700
+      "
+    >
       <div class="container mx-auto px-6 py-4">
         <div class="flex justify-between items-center">
           <div>
-            <div class="text-sm text-gray-600 mr-2"> {{ $t('made_by') }} </div>
+            <div class="text-sm text-gray-600 dark:text-gray-200 mr-2"> {{ $t('made_by') }} </div>
           </div>
 
           <div class="flex items-center -mx-2">

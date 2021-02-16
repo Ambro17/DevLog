@@ -1,13 +1,34 @@
 <template>
+
 <main class="font-sans bg-white">
   <div>
     <!-- Header -->
     <Header />
-    <section class="section-main bg-white mt-20">
-      <div class="max-w-2xl px-6 text-center mx-auto">
-        <h2 class="text-3xl font-semibold text-gray-800">{{ $t('home.intro.pre.hi') }}, <span class="bg-indigo-600 text-white rounded px-1">{{ $t('home.intro.pre.whoami') }}</span> . {{ $t('home.intro.pre.nice') }}</h2>
 
-        <i18n path="home.intro.full_text" tag="p" class="text-gray-600 mt-4">
+    <!-- Lead Intro -->
+    <section class="
+      section-main 
+      bg-white
+      dark:bg-gray-900
+      border-t-80
+      border-white
+      dark:border-gray-900
+      "
+    >
+      <div class="max-w-2xl px-6 text-center mx-auto">
+        <h2 
+          class="text-3xl font-semibold text-gray-800 dark:text-gray-50">
+          {{ $t('home.intro.pre.hi') }}, 
+          <span class="
+            bg-indigo-600 
+            dark:bg-indigo-500 
+            text-white 
+            rounded px-1"
+          >{{ $t('home.intro.pre.whoami') }}</span> .
+            {{ $t('home.intro.pre.nice') }}
+        </h2>
+
+        <i18n path="home.intro.full_text" tag="p" class="text-gray-600 dark:text-gray-50 mt-4">
           <template #br>
             <br>
           </template>
@@ -31,16 +52,21 @@
           </template>
           <template #onapsis_link>
             <a 
-              class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+              class="
+                underline 
+                text-blue-600 
+                dark:text-gray-100 
+                hover:text-blue-800 
+                dark:hover:text-indigo-500 
+                visited:text-purple-600
+              "
               href='https://onapsis.com/'
-              target="_blank">
-              Onapsis
-            </a>
+              target="_blank"
+            >Onapsis</a>
           </template>
         </i18n>
 
-
-        <div class="flex items-end justify-center mt-12 mb-10">
+        <div class="flex items-end justify-center mt-12">
           <div class="w-48 h-48 relative mb-6">
             <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
               <img 
@@ -52,13 +78,21 @@
           </div>
         </div>
       </div>
+      <!-- Extra Div to mimic a background-colorable mb-10-->
+      <div class="
+        fake-margin-bottom-20 
+        border-b-80
+        border-white
+        dark:border-gray-900">
+      </div>
     </section>
 
-    <section class="section-secondary bg-gray-800 pattern py-20">
+    <!-- About -->
+    <section class="section-secondary bg-gray-800 dark:bg-gray-900 pattern py-20">
       <div class="max-w-5xl px-6 mx-auto text-center">
         <h2 class="text-2xl font-semibold text-white">{{ $t('home.about.header') }}</h2>
 
-        <p class="text-gray-400 mt-10">
+        <p class="text-gray-400 dark:text-gray-200 mt-10">
           {{ $t('home.about.pre') }}
           <br>
           {{ $t('home.about.post') }}
@@ -66,37 +100,38 @@
       </div>
     </section>
 
-    <section class="section-posts bg-white py-20">
+    <!-- Latest Posts -->
+    <section class="section-posts bg-white dark:bg-gray-900 py-20">
       <div class="max-w-5xl px-6 mx-auto text-center">
-        <h2 class="text-2xl font-semibold text-gray-800">{{ $t('posts_header') }}</h2>
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-gray-100">{{ $t('posts_header') }}</h2>
 
         <div class="flex flex-col items-center justify-center mt-6">
-          <a class="max-w-2xl w-full block bg-white shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" 
+          <a class="max-w-2xl w-full block bg-white dark:bg-gray-700 shadow-md rounded-md border-t-4 border-indigo-600 dark:border-indigo-500 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" 
              href="#">
             <div class="flex items-center justify-between px-4 py-2">
-              <h3 class="text-lg text-center font-medium text-gray-700">Why i use emojis in all my git commits 🙌</h3>
-              <span class="block text-gray-600 font-light text-sm">20 Jan 2020</span>
+              <h3 class="text-lg text-center font-medium text-gray-700 dark:text-gray-300">Why i use emojis in all my git commits 🙌</h3>
+              <span class="block text-gray-600 dark:text-gray-100 font-light text-sm">20 Jan 2020</span>
             </div>
           </a>
 
-          <a class="mt-8 max-w-2xl w-full block bg-white shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" href="#">
+          <a class="mt-8 max-w-2xl w-full block bg-white dark:bg-gray-700 shadow-md rounded-md border-t-4 border-indigo-600 dark:border-indigo-500 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" href="#">
             <div class="flex items-center justify-between px-4 py-2">
-              <h3 class="text-lg font-medium text-gray-700">Direnv: Automate your environment variables handling 🗜️</h3>
-              <span class="block text-gray-600 font-light text-sm">29 Oct 2019</span>
+              <h3 class="text-lg font-medium text-gray-700 dark:text-gray-300">Direnv: Automate your environment variables handling 🗜️</h3>
+              <span class="block text-gray-600 dark:text-gray-100 font-light text-sm">29 Oct 2019</span>
             </div>
           </a>
 
-          <a class="mt-8 max-w-2xl w-full block bg-white shadow-md rounded-md border-t-4 border-indigo-600 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" href="#">
+          <a class="mt-8 max-w-2xl w-full block bg-white dark:bg-gray-700 shadow-md rounded-md border-t-4 border-indigo-600 dark:border-indigo-500 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" href="#">
             <div class="flex items-center justify-between px-4 py-2">
-              <h3 class="text-lg font-medium text-gray-700">Strawberry: The best approach to GraphQL Schema Design 🍓</h3>
-              <span class="block text-gray-600 font-light text-sm">15 Oct 2019</span>
+              <h3 class="text-lg font-medium text-gray-700 dark:text-gray-300">Strawberry: The best approach to GraphQL Schema Design 🍓</h3>
+              <span class="block text-gray-600 dark:text-gray-100 font-light text-sm">15 Oct 2019</span>
             </div>
           </a>
 
         </div>
 
         <div class="flex items-center justify-center mt-12">
-          <a class="flex items-center text-gray-600 hover:underline hover:text-gray-500" 
+          <a class="flex items-center text-gray-600 dark:text-gray-100 hover:underline hover:text-gray-500 dark:hover:text-indigo-500" 
              href="https://dev.to/ambro17"
              target="_blank">
             <span>{{ $t('view_all_posts') }}</span>
@@ -109,47 +144,56 @@
       </div>
     </section>
 
-    <section class="section-projects bg-gray-800 pattern pt-20 pb-10">
+    <!-- Project -->
+    <section class="section-projects bg-gray-800 dark:bg-gray-900 pattern pt-20 pb-10">
       <div class="max-w-5xl px-6 mx-auto text-center">
         <h2 class="text-2xl font-semibold text-white">{{ $t('projects') }}</h2>
 
         <div class="flex items-center justify-center mt-10">
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <div class="max-w-xs w-full">
-              <div class="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
+              <div class="flex items-center justify-center h-56 
+                border-b-8 
+                rounded-md 
+                overflow-hidden
+                bg-white 
+                dark:bg-gray-800 
+                border-teal-400 
+                dark:border-gray-800"
+              >
                 <img class="object-cover h-48" src="https://raw.githubusercontent.com/Ambro17/slackify/master/docs/logopro.svg" alt="">
               </div>
 
               <a target="_blank" href="https://github.com/Ambro17/Slackify" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 <div class="py-2 px-3 text-center text-sm">
-                  <p class="text-gray-300">🚀 Slackify</p>
-                  <span class="block text-gray-500 mt-2">Lightweight framework to develop modern Slack bots.</span>
+                  <p class="text-gray-300 dark:text-gray-100">🚀 Slackify</p>
+                  <span class="block text-gray-500 dark:text-gray-300 mt-2">Lightweight framework to develop modern Slack bots.</span>
                 </div>
               </a>
             </div>
 
             <div class="max-w-xs w-full">
-              <div class="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
+              <div class="flex items-center justify-center h-56 bg-white dark:bg-gray-800 border-b-8 border-teal-400 dark:border-gray-800 rounded-md overflow-hidden">
                 <img class="object-cover h-34" src="https://raw.githubusercontent.com/Ambro17/graphql-schema-diff/master/images/logo.svg?sanitize=true" alt="">
               </div>
 
               <a target="_blank" href="https://github.com/Ambro17/graphql-schema-diff" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 <div class="py-2 px-3 text-center text-sm">
-                  <p class="text-gray-300">🔎 GraphQL Schema Diff</p>
-                  <span class="block text-gray-500 mt-2">Compare GraphQL Schemas to detect breaking changes</span>
+                  <p class="text-gray-300 dark:text-gray-100">🔎 GraphQL Schema Diff</p>
+                  <span class="block text-gray-500 dark:text-gray-300 mt-2">Compare GraphQL Schemas to detect breaking changes</span>
                 </div>
               </a>
             </div>
 
             <div class="max-w-xs w-full">
-              <div class="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
+              <div class="flex items-center justify-center h-56 bg-white dark:bg-gray-800 border-b-8 border-teal-400 dark:border-gray-800 rounded-md overflow-hidden">
                 <img class="object-cover h-48" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="">
               </div>
 
               <a target="_blank" href="https://github.com/Ambro17/AmbroBot" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 <div class="py-2 px-3 text-center text-sm">
-                  <p class="text-gray-300">AmbroBot</p>
-                  <span class="block text-gray-500 mt-2">🤖 Telegram bot to show series, subway status and a few other things</span>
+                  <p class="text-gray-300 dark:text-gray-100">AmbroBot</p>
+                  <span class="block text-gray-500 dark:text-gray-300 mt-2">🤖 Telegram bot to show series, subway status and a few other things</span>
                 </div>
               </a>
             </div>
@@ -158,35 +202,36 @@
       </div>
     </section>
 
-    <section class="section-projects bg-gray-800 pattern pt-10 pb-20">
+    <!-- Talks -->
+    <section class="section-projects bg-gray-800 dark:bg-gray-900 pattern pt-10 pb-20">
       <div class="max-w-5xl px-6 mx-auto text-center">
         <h2 class="text-2xl font-semibold text-white">{{ $t('talks') }}</h2>
 
         <div class="flex items-center justify-center mt-10 mb-10">
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
             <div class="max-w-xs w-full">
-              <div class="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
+              <div class="flex items-center justify-center h-56 bg-white dark:bg-gray-800 border-b-8 border-teal-400 dark:border-gray-800 rounded-md overflow-hidden">
                 <img class="object-cover h-48" src="https://i2.wp.com/gist.github.com/uttamukkoji/c9da31a439f3b31bcddba714cc424fcd/raw/e422e0902f00851ed4e4cf485aafac02a2423d12/RESTvsGraphQL.png" alt="">
               </div>
 
               <a target="_blank" href="https://www.youtube.com/watch?v=FEl9C5Ui5OM" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 <div class="py-2 px-3 text-center text-sm">
-                  <p class="text-gray-300">GraphQL vs REST</p>
-                  <span class="block text-gray-400 mt-2">A comparison between two API paradigms</span>
-                  <span class="block text-gray-500 mt-2">@ Pyar Meetup July</span>
+                  <p class="text-gray-300 dark:text-gray-100">GraphQL vs REST</p>
+                  <span class="block text-gray-400 dark:text-gray-300 mt-2">A comparison between two API paradigms</span>
+                  <span class="block text-gray-500 dark:text-gray-400 mt-2">@ Pyar Meetup July</span>
                 </div>
               </a>
             </div>
             <div class="max-w-xs w-full">
-              <div class="flex items-center justify-center h-56 bg-white border-b-8 border-teal-400 rounded-md overflow-hidden">
+              <div class="flex items-center justify-center h-56 bg-white dark:bg-gray-800 border-b-8 border-teal-400 dark:border-gray-800 rounded-md overflow-hidden">
                 <img class="object-cover h-48" src="https://eventos.python.org.ar/media/images_thumbnails/gql.png.700x450_q85_box-108%2C0%2C1091%2C630_crop_detail.jpg" alt="">
               </div>
 
               <a target="_blank" href="https://www.youtube.com/watch?v=ePSRREuTZq4" class="block bg-gray-700 mt-5 rounded-md overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                 <div class="py-2 px-3 text-center text-sm">
-                  <p class="text-gray-300">Pythonic APIs with GraphQL</p>
-                  <span class="block text-gray-400 mt-2">How to write easy to use APIs with GraphQL</span>
-                  <span class="block text-gray-500 mt-2">@ Pyconar 2020</span>
+                  <p class="text-gray-300 dark:text-gray-100">Pythonic APIs with GraphQL</p>
+                  <span class="block text-gray-400 dark:text-gray-300 mt-2">How to write easy to use APIs with GraphQL</span>
+                  <span class="block text-gray-500 dark:text-gray-400 mt-2">@ Pyconar 2020</span>
                 </div>
               </a>
             </div>
@@ -197,10 +242,12 @@
       </div>
     </section>
 
+    <!-- Footer -->
     <Footer />
 
   </div>
 </main>
+
 </template>
 
 <style>
