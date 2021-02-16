@@ -1,53 +1,69 @@
 <template>
 <label class="dark-mode-switcher flex items-center ml-1">
-  <!-- Icon -->
   <a class="flex items-center text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-500" href="#">
-    <svg 
-      class="h-6 w-6 sm:h-6 sm:w-6"
-      xmlns="http://www.w3.org/2000/svg" 
-      fill="none" 
-      viewBox="0 0 24 24" 
-      stroke="currentColor"
+    <button
+      @click="toggleDarkMode"
+      class="p-2 rounded focus:outline-none"
+      aria-label="Toggle theme"
     >
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-    </svg>
+      <svg
+        class="h-6 w-6 sm:h-6 sm:w-6"
+        v-if="dark"
+        aria-label="Apply light theme"
+        role="image"
+        fill="currentColor" 
+        viewBox="0 0 20 20" 
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+          clip-rule="evenodd"
+        />
+      </svg>
+      <svg 
+        class="h-6 w-6 sm:h-6 sm:w-6"
+        v-if="!dark"
+        aria-label="Apply dark theme"
+        role="image"
+        fill="none" 
+        viewBox="0 0 24 24" 
+        stroke="currentColor"
+        xmlns="http://www.w3.org/2000/svg" 
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+      </svg>
+    </button>
   </a>
-  <!-- <a class="flex items-center text-gray-800 hover:text-indigo-600" href="#">
-    <svg 
-      class="h-6 w-6 sm:h-6 sm:w-6"
-      xmlns="http://www.w3.org/2000/svg" 
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      visibility="hidden" 
-    >
-      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-    </svg>
-  </a> -->
-
 </label>
 </template>
 
-<style>
-  input:before {
-    content: '';
-    position: absolute;
-    width: 1.25rem;
-    height: 1.25rem;
-    border-radius: 50%;
-    top: -0.05rem;
-    left: 0.4rem;
-    transform: scale(0.7);
-    box-shadow: -0.5rem 0.1rem #fff;
-    background-color: transparent;
-    transition: .2s ease-in-out;
-  }
+<script>
 
-  input:checked {
-    @apply: bg-indigo-400;
-    background-color: #312E81;
+export default {
+  name: 'DarkModeSwitcher',
+  data: function() {
+      return {
+        dark: document.documentElement.classList.contains('dark')
+      }
+  },
+  methods: {
+    toggleDarkMode() {
+      this._updateState(this.dark)
+      const isOnDarkMode = document.documentElement.classList.contains('dark')
+      this._updateHTMLWithThemeChanges(isOnDarkMode)
+    },
+    _updateState(oldDarkValue) {
+      this.dark = !oldDarkValue
+      localStorage.dark = this.dark? 'true': 'false'
+    },
+    _updateHTMLWithThemeChanges(isOnDarkMode) {
+      if (isOnDarkMode) {
+        document.documentElement.classList.remove('dark')
+      } else {
+        document.documentElement.classList.add('dark')
+      }
+    }
   }
-
-  input:checked:before {
-    left: 1.45rem;
-  }
-</style>
+}
+</script>
