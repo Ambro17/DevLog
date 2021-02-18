@@ -4,13 +4,13 @@
     <button
       @click="toggleDarkMode"
       class="p-2 rounded focus:outline-none"
-      aria-label="Toggle theme"
+      aria-label="Toggle Dark Mode"
     >
       <svg
         class="h-6 w-6 sm:h-6 sm:w-6"
         v-if="dark"
         aria-label="Apply light theme"
-        role="image"
+        role="button"
         fill="currentColor" 
         viewBox="0 0 20 20" 
         xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@
         class="h-6 w-6 sm:h-6 sm:w-6"
         v-if="!dark"
         aria-label="Apply dark theme"
-        role="image"
+        role="button"
         fill="none" 
         viewBox="0 0 24 24" 
         stroke="currentColor"

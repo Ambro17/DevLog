@@ -4,6 +4,7 @@
     <button
       href="#"
       class="flex items-center"
+      aria-label="Toggle Language"
       @click="toggleVisibility"
       @keydown.esc.exact="hideDropdown"
     >
