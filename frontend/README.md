@@ -13,8 +13,12 @@ Using Ghostwind template from [here](https://github.com/tailwindtoolbox/Ghostwin
  [x] Create Header and Footer vue components
  [x] Implement internationalization (Spanish + English)
  [x] Enable dark mode
- [ ] Improvement: Use flag images instead of emojis to have consistent ui over different fonts
- [ ] Improve site performance with lighthouse
+
+## Improvements
+ [ ] Make lead layout finish before about page with some css property
+ [ ] Auto detect user language and adjust accordingly
+ [ ] Fine-tune site performance with lighthouse
+ [ ] Use flag svgs instead of emojis to have consistent ui over different fonts on language switcher
  [ ] Migrate data to use graphql+strawberry (django? flask?)
 
 ## Hacks
