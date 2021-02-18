@@ -5,7 +5,7 @@ frontend:
 	cd frontend && npm run serve && cd -
 
 install-fe:
-	cd frontend && npm run install && cd -
+	cd frontend && npm install && cd -
 
 install-be:
 	cd backend && poetry install && cd -
