@@ -10,3 +10,5 @@
 - [ ] Opinión de Hasura
 - [ ] No uses dynamodb a menos que quieras ser el nuevo Amazon.
 - [ ] Review de Production Ready GraphQL y Architecture patterns with python
+- [ ] Tailwind tutorial with flask?
+
