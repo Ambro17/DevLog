@@ -1,0 +1,4 @@
+# Text file directed to web crawlers for SEO
+# Allow everything to everyone, and let's hope for the best
+User-agent: * 
+Disallow: 
