@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white font-sans leading-normal tracking-normal">
+  <div class="bg-white dark:bg-gray-900 font-sans leading-normal tracking-normal">
 
     <!--Nav-->
     <Header />   
@@ -7,7 +7,7 @@
     <!--Title-->
     <div class="text-center pt-16 md:pt-32">
       <p class="text-sm md:text-base text-green-500 font-bold">08 APRIL 2019 <span class="text-gray-900">/</span> GETTING STARTED</p>
-      <h1 class="font-bold break-normal text-3xl md:text-5xl">Welcome to Ghostwind CSS</h1>
+      <h1 class="font-bold break-normal text-3xl dark:text-gray-300 md:text-5xl">Welcome to Ghostwind CSS</h1>
     </div>
 
     <!--image-->
@@ -18,14 +18,14 @@
       
       <div class="mx-0 sm:mx-6">
         
-        <div class="bg-white w-full p-8 md:p-24 text-xl md:text-2xl text-gray-800 leading-normal" style="font-family:Georgia,serif;">
+        <div class="bg-white dark:bg-gray-800 w-full p-8 md:p-24 text-xl md:text-2xl text-gray-800 dark:text-gray-400 leading-normal" style="font-family:Georgia,serif;">
           
           <!--Post Content-->
           
 
           <!--Lead Para-->
           <p class="text-2xl md:text-3xl mb-5">
-            👋 Welcome fellow <a class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500" href="https://www.tailwindcss.com">Tailwind CSS</a> and <a class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500" href="https://www.ghost.org">Ghost</a> fan.  This starter template is an attempt to replicate the default Ghost theme <a class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500" href="https://demo.ghost.io/welcome">"Casper"</a> using Tailwind CSS and vanilla Javascript.
+            👋 Welcome fellow <a href="https://www.tailwindcss.com">Tailwind CSS</a> and <a href="https://www.ghost.org">Ghost</a> fan.  This starter template is an attempt to replicate the default Ghost theme <a href="https://demo.ghost.io/welcome">"Casper"</a> using Tailwind CSS and vanilla Javascript.
           </p>
 
           <p class="py-6">The basic blog page layout is available and all using the default Tailwind CSS classes (although there are a few hardcoded style tags). If you are going to use this in your project, you will want to convert the classes into components.</p>				
@@ -45,7 +45,7 @@
             <code class="break-words whitespace-pre-wrap">
   &lt;header class="site-header outer"&gt;
     &lt;div class="inner"&gt;
-      {{"site-nav"}}
+      {{"&lt;p>Hello World!&lt;/p>"}}
     &lt;/div&gt;
   &lt;/header&gt;
             </code>
@@ -56,7 +56,7 @@
               
         </div>
           <!--Author-->
-          <div class="flex w-full items-center font-sans p-8 md:p-24">
+          <div class="flex w-full items-center font-sans p-8 md:p-12">
             <img class="w-10 h-10 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of Author">
             <div class="flex-1">
               <p class="text-base font-bold text-base md:text-xl leading-none">UnwantedCrow</p>
@@ -68,71 +68,8 @@
       </div>
     </div>
 
-    <!--Post Content-->
-    <div class="bg-gray-200">
-    
-      <div class="container w-full max-w-6xl mx-auto px-2 py-8">
-        <div class="flex flex-wrap -mx-2">
-          <div class="w-full md:w-1/3 px-2 pb-12">
-            <div class="h-full bg-white rounded overflow-hidden shadow-md hover:shadow-lg relative smooth">
-              <a href="#" class="no-underline hover:no-underline">
-                  <img src="https://source.unsplash.com/_AjqGGafofE/400x200" class="h-48 w-full rounded-t shadow-lg">
-                  <div class="p-6 h-auto md:h-48">	
-                    <p class="text-gray-600 text-xs md:text-sm">GETTING STARTED</p>
-                    <div class="font-bold text-xl text-gray-900">Lorem ipsum dolor sit amet.</div>
-                    <p class="text-gray-800 font-serif text-base mb-5">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. 
-                    </p>
-                  </div>
-                  <div class="flex items-center justify-between inset-x-0 bottom-0 p-6">
-                    <img class="w-8 h-8 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of Author">
-                    <p class="text-gray-600 text-xs md:text-sm">2 MIN READ</p>
-                  </div>
-              </a>
-            </div>
-          </div>
-          <div class="w-full md:w-1/3 px-2 pb-12">
-            <div class="h-full bg-white rounded overflow-hidden shadow-md hover:shadow-lg relative smooth">
-              <a href="#" class="no-underline hover:no-underline">
-                  <img src="https://source.unsplash.com/_AjqGGafofE/400x200" class="h-48 w-full rounded-t shadow">
-                  <div class="p-6 h-auto md:h-48">	
-                    <p class="text-gray-600 text-xs md:text-sm">UNDERWATER</p>
-                    <div class="font-bold text-xl text-gray-900">Biolumini algae diatomeae ecology.</div>
-                    <p class="text-gray-800 font-serif text-base mb-5">
-                      Lorem ipsum dolor sit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. 
-                    </p>
-                  </div>
-                  <div class="flex items-center justify-between inset-x-0 bottom-0 p-6">
-                    <img class="w-8 h-8 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of Author">
-                    <p class="text-gray-600 text-xs md:text-sm">4 MIN READ</p>
-                  </div>
-              </a>
-            </div>
-          </div>
-          <div class="w-full md:w-1/3 px-2 pb-12">
-            <div class="h-full bg-white rounded overflow-hidden shadow-md hover:shadow-lg relative smooth">
-              <a href="#" class="no-underline hover:no-underline">
-                  <img src="https://source.unsplash.com/DEa8_vxKlEo/400x200" class="h-48 w-full rounded-t shadow">
-                  <div class="p-6 h-auto md:h-48">	
-                    <p class="text-gray-600 text-xs md:text-sm">FOREST</p>
-                    <div class="font-bold text-xl text-gray-900">What is life but a teardrop in the eye of infinity?</div>
-                    <p class="text-gray-800 font-serif text-base mb-5">
-                      Mollis pretium integer eros et dui orci, lectus nec elit sagittis neque. Dignissim ac nullam semper aliquet volutpat, ut scelerisque.
-                    </p>
-                  </div>
-                  <div class="flex items-center justify-between inset-x-0 bottom-0 p-6">
-                    <img class="w-8 h-8 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of Author">
-                    <p class="text-gray-600 text-xs md:text-sm">7 MIN READ</p>
-                  </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <Footer />
 
-      <Footer />
-
-    </div>
   </div>
 </template>
 
