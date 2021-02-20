@@ -42,7 +42,14 @@ const routes = [
 
 const router = new VueRouter({
   mode: "history",
-  routes
+  routes,
+  scrollBehavior() {
+    // By default, vue-router changes pages
+    // but at the same scroll height, which
+    // isn't the desired default.
+    // So on every router-link, we scroll to top
+    return { x: 0, y: 0 };
+  }
 });
 
 // Set locale based on url string
