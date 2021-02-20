@@ -1,7 +1,8 @@
 <template>
     <header 
       class="
-        topbar 
+        topbar
+        sticky-navbar
         bg-white 
         shadow 
         border-t-4 
@@ -99,3 +100,8 @@ export default {
     }
 }
 </script>
+<style>
+.sticky-navbar {
+  @apply sticky top-0 z-50 
+}
+</style>
