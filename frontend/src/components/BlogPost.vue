@@ -59,8 +59,8 @@
           <div class="flex w-full items-center font-sans p-8 md:p-12">
             <img class="w-10 h-10 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of Author">
             <div class="flex-1">
-              <p class="text-base font-bold text-base md:text-xl leading-none">UnwantedCrow</p>
-              <p class="text-gray-600 text-xs md:text-base">Always looking to learn the next big thing</p>
+              <p class="text-base dark:text-gray-300 font-bold text-base md:text-xl leading-none">UnwantedCrow</p>
+              <p class="text-gray-600 dark:text-gray-500 text-xs md:text-base">Always looking to learn the next big thing</p>
             </div>
           </div>
           <!--/Author-->
