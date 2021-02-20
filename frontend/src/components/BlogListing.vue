@@ -12,7 +12,7 @@
       <div class="bg-gray-200 dark:bg-gray-900 w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t">
         
       <!--Lead Card-->
-      <div class="lead-card flex h-full bg-white rounded overflow-hidden shadow-lg">
+      <div class="lead-card flex h-full bg-white dark:bg-gray-900 rounded overflow-hidden shadow-lg">
 
         <router-link :to="`/${$i18n.locale}/post`" class="flex flex-wrap no-underline hover:no-underline">
 
@@ -29,7 +29,7 @@
               </p>
             </div>
 
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none dark:bg-gray-800 overflow-hidden shadow-lg p-6">
+            <div class="flex-none mt-auto bg-white dark:bg-gray-800 rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
               <div class="flex items-center justify-between">
                 <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author">
                 <p class="text-gray-600 dark:text-gray-400 text-xs md:text-sm">1 MIN READ</p>
