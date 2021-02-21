@@ -1,7 +1,7 @@
 module.exports = {
   pluginOptions: {
     i18n: {
-      locale: 'en', // store.getters.getLangKey 
+      locale: 'en',
       localeDir: 'locales',
       enableInSFC: false
     }
