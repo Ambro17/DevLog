@@ -10,12 +10,12 @@
       section-main 
       bg-white
       dark:bg-gray-900
-      border-t-80
-      border-white
+      border-t-80 
+      border-white 
       dark:border-gray-900
       "
     >
-      <div class="max-w-2xl space-y-8 px-6 text-center mx-auto mt-10">
+      <div class="max-w-2xl px-6 text-center mx-auto mt-10">
         <h2 
           class="text-3xl font-semibold text-gray-800 dark:text-gray-50">
           {{ $t('home.intro.pre.hi') }}, 
@@ -29,7 +29,7 @@
         </h2>
 
         <i18n path="home.intro.full_text" tag="p" 
-          class="text-xl leading-loose text-gray-600 dark:text-gray-50 mt-4">
+          class="text-xl leading-loose text-gray-600 dark:text-gray-50 pt-8">
           <template #br>
             <br>
           </template>
@@ -66,24 +66,59 @@
             >Onapsis</a>
           </template>
         </i18n>
-
         <div class="flex items-end justify-center mt-12">
           <div class="w-48 h-48 relative mb-6">
             <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
               <img 
-                src="../assets/images/profile.svg" 
+                src="../assets/images/profile.svg"
                 alt="Nahuel Emoji"
                 class="object-cover object-center w-full h-full visible group-hover:hidden"
               >
             </div>
           </div>
         </div>
-        <div class="button-container">
-          <a href="https://www.linkedin.com/in/nahuel-ambrosini-65a625b2/" class="bg-blue-500 rounded-lg font-bold text-white text-center px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600" target="_blank">
-              {{ $t('lets_talk') }}
-              <svg class="inline ml-2 w-6 stroke-current text-white stroke-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-              </svg>
+        <div class="
+          avatar-icons-row
+          flex items-center justify-center space-x-4 mt-0
+          text-gray-800 
+          dark:text-gray-100 
+          ">
+          <a href="mailto:ambro17.1@gmail.com" class="hover:text-indigo-600 dark:hover:text-indigo-500" target="_blank">
+            <svg
+              class="h-6 w-6 sm:h-6 sm:w-6 mail"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              fill="currentColor"
+            >
+              <path
+                d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"
+                id="path81" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/nahuel-ambrosini-65a625b2/" class="hover:text-indigo-600 dark:hover:text-indigo-500" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 sm:h-6 sm:w-6 linkedin"
+              viewBox="0 5 24 24"
+              fill="currentColor"
+              >
+              <path
+                id="path2"
+                d="m 0.65298466,8.5056968 c 0,-0.7315145 0.256032,-1.335002 0.76807634,-1.8104626 0.5120433,-0.4754828 1.1777229,-0.7132127 1.9969952,-0.7132127 0.8046559,0 1.4556755,0.2340648 1.9531036,0.7022402 0.5120432,0.4827902 0.7680751,1.1118657 0.7680751,1.8872714 0,0.7022394 -0.2486994,1.2874259 -0.7461276,1.7555999 -0.5120443,0.482791 -1.1850321,0.724185 -2.0189438,0.724185 h -0.021936 c -0.804656,0 -1.4556768,-0.241394 -1.9531037,-0.724185 C 0.90169516,9.844343 0.65299086,9.2371906 0.65299086,8.5056968 Z m 0.285284,19.2018812 V 13.048314 H 5.8100595 v 14.659264 z m 7.57102964,0 H 13.381088 V 19.52209 c 0,-0.512063 0.05852,-0.907074 0.175561,-1.185029 0.204812,-0.497428 0.515707,-0.918048 0.932663,-1.261838 0.416952,-0.343813 0.939969,-0.515708 1.569068,-0.515708 1.638567,0 2.457839,1.104558 2.457839,3.313696 v 7.834367 h 4.871791 v -8.404937 c 0,-2.165249 -0.512045,-3.807459 -1.536152,-4.926655 -1.024107,-1.119194 -2.377367,-1.678792 -4.059822,-1.678792 -1.887272,0 -3.357587,0.811965 -4.410948,2.435895 v 0.04389 h -0.02193 l 0.02193,-0.04389 V 13.048314 H 8.5092983 c 0.02925,0.468153 0.04389,1.923831 0.04389,4.367056 0,2.443204 -0.01462,5.873933 -0.04389,10.292208 z"
+                style="stroke-width:0.0219449" />
+            </svg>
+          </a>
+          <a href="https://github.com/Ambro17" class="hover:text-indigo-600 dark:hover:text-indigo-500" target="_blank">
+            <svg
+              class="h-6 w-6 sm:h-6 sm:w-6 github"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 255.96217"
+              fill="currentColor"
+            >
+              <path
+                d="M 127.505,0 C 57.095,0 0,57.085 0,127.505 c 0,56.336 36.534,104.13 87.196,120.99 6.372,1.18 8.712,-2.766 8.712,-6.134 0,-3.04 -0.119,-13.085 -0.173,-23.739 -35.473,7.713 -42.958,-15.044 -42.958,-15.044 -5.8,-14.738 -14.157,-18.656 -14.157,-18.656 -11.568,-7.914 0.872,-7.752 0.872,-7.752 12.804,0.9 19.546,13.14 19.546,13.14 11.372,19.493 29.828,13.857 37.104,10.6 1.144,-8.242 4.449,-13.866 8.095,-17.05 -28.32,-3.225 -58.092,-14.158 -58.092,-63.014 0,-13.92 4.981,-25.295 13.138,-34.224 -1.324,-3.212 -5.688,-16.18 1.235,-33.743 0,0 10.707,-3.427 35.073,13.07 10.17,-2.826 21.078,-4.242 31.914,-4.29 10.836,0.048 21.752,1.464 31.942,4.29 24.337,-16.497 35.029,-13.07 35.029,-13.07 6.94,17.563 2.574,30.531 1.25,33.743 8.175,8.929 13.122,20.303 13.122,34.224 0,48.972 -29.828,59.756 -58.22,62.912 4.573,3.957 8.648,11.717 8.648,23.612 0,17.06 -0.148,30.791 -0.148,34.991 0,3.393 2.295,7.369 8.759,6.117 50.634,-16.879 87.122,-64.656 87.122,-120.973 C 255.009,57.085 197.922,0 127.505,0"
+                id="path2" />
+            </svg>
           </a>
         </div>
       </div>
@@ -144,7 +179,6 @@
              href="https://dev.to/ambro17"
              target="_blank">
             <span>{{ $t('view_all_posts') }}</span>
-
             <svg class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
             </svg>
