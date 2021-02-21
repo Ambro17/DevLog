@@ -3,9 +3,10 @@
       bg-white 
       dark:bg-gray-800 
       border-t-2
-      border-gray-900
+      border-gray-100
+      shadow-2xl
       dark:border-gray-700
-      "
+      "      
     >
       <div class="container mx-auto px-6 py-4">
         <div class="flex justify-between items-center">

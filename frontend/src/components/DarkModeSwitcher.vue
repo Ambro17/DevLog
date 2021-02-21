@@ -1,9 +1,9 @@
 <template>
-<label class="dark-mode-switcher flex items-center ml-1">
-  <a class="flex items-center text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-500" href="#">
+<label class="dark-mode-switcher flex items-center ml-2">
+  <div class="flex items-center text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-500">
     <button
       @click="toggleDarkMode"
-      class="p-2 rounded focus:outline-none"
+      class="rounded focus:outline-none"
       aria-label="Toggle Dark Mode"
     >
       <svg
@@ -34,7 +34,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
       </svg>
     </button>
-  </a>
+  </div>
 </label>
 </template>
 

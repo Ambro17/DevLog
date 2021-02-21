@@ -40,9 +40,28 @@ const routes = [
     }
 ];
 
+const isSwitchingLanguage = function(from, to)  {
+  return from.params.lang != to.params.lang  
+}
+
 const router = new VueRouter({
   mode: "history",
-  routes
+  routes,
+  scrollBehavior(to, from) {
+    // By default, vue-router changes pages
+    // but at the same scroll height, which
+    // isn't the desired default.
+    // So on every router-link, we scroll to top
+    if (isSwitchingLanguage(from, to)) {
+      // When switching languages we don't
+      // Want to move the user from what 
+      // (s)he is reading
+      return      
+    }
+    else {
+      return { x: 0, y: 0 };
+    }
+  }
 });
 
 // Set locale based on url string
