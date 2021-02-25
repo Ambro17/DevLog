@@ -15,7 +15,7 @@
       dark:border-gray-900
       "
     >
-      <div class="max-w-2xl px-6 text-center mx-auto mt-10">
+      <div class="max-w-2xl px-6 text-center mx-auto sm:mt-10">
         <h2 
           class="text-3xl font-semibold text-gray-800 dark:text-gray-50">
           {{ $t('home.intro.pre.hi') }}, 
@@ -28,8 +28,15 @@
             {{ $t('home.intro.pre.nice') }}
         </h2>
 
-        <i18n path="home.intro.full_text" tag="p" 
-          class="text-xl leading-loose text-gray-600 dark:text-gray-50 pt-8">
+        <i18n path="home.intro.full_text" tag="p" class="
+          text-lg
+          leading-relaxed 
+          sm:leading-loose
+          sm:text-xl
+          text-gray-600 
+          dark:text-gray-50 
+          pt-8
+        ">
           <template #br>
             <br>
           </template>
