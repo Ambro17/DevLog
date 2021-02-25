@@ -10,12 +10,12 @@
       section-main 
       bg-white
       dark:bg-gray-900
-      border-t-80
-      border-white
+      border-t-80 
+      border-white 
       dark:border-gray-900
       "
     >
-      <div class="max-w-2xl px-6 text-center mx-auto">
+      <div class="max-w-2xl px-6 text-center mx-auto sm:mt-10">
         <h2 
           class="text-3xl font-semibold text-gray-800 dark:text-gray-50">
           {{ $t('home.intro.pre.hi') }}, 
@@ -28,7 +28,15 @@
             {{ $t('home.intro.pre.nice') }}
         </h2>
 
-        <i18n path="home.intro.full_text" tag="p" class="text-gray-600 dark:text-gray-50 mt-4">
+        <i18n path="home.intro.full_text" tag="p" class="
+          text-lg
+          leading-relaxed 
+          sm:leading-loose
+          sm:text-xl
+          text-gray-600 
+          dark:text-gray-50 
+          pt-8
+        ">
           <template #br>
             <br>
           </template>
@@ -65,17 +73,60 @@
             >Onapsis</a>
           </template>
         </i18n>
-
         <div class="flex items-end justify-center mt-12">
           <div class="w-48 h-48 relative mb-6">
             <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
               <img 
-                src="../assets/images/profile.svg" 
+                src="../assets/images/profile.svg"
                 alt="Nahuel Emoji"
                 class="object-cover object-center w-full h-full visible group-hover:hidden"
               >
             </div>
           </div>
+        </div>
+        <div class="
+          avatar-icons-row
+          flex items-center justify-center space-x-4 mt-0
+          text-gray-800 
+          dark:text-gray-100 
+          ">
+          <!-- Icons Row -->
+          <a href="mailto:ambro17.1@gmail.com" class="hover:text-indigo-600 dark:hover:text-indigo-500" target="_blank">
+            <!-- Email -->
+            <svg 
+              fill="currentColor" 
+              class="social-media-icon email-icon" 
+              role="img" 
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg" 
+            >
+              <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/nahuel-ambrosini-65a625b2/" class="hover:text-indigo-600 dark:hover:text-indigo-500" target="_blank">
+            <!-- LinkedIn -->
+            <svg 
+              class="social-media-icon linkedin" 
+              fill="currentColor" 
+              role="img" 
+              viewBox="0 0 24 24" 
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <a href="https://github.com/Ambro17" class="hover:text-indigo-600 dark:hover:text-indigo-500" target="_blank">
+            <!-- Github -->
+            <svg
+              class="social-media-icon github"
+              fill="currentColor"
+              role="img"
+              viewBox="0 0 256 255.96217"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M 127.505,0 C 57.095,0 0,57.085 0,127.505 c 0,56.336 36.534,104.13 87.196,120.99 6.372,1.18 8.712,-2.766 8.712,-6.134 0,-3.04 -0.119,-13.085 -0.173,-23.739 -35.473,7.713 -42.958,-15.044 -42.958,-15.044 -5.8,-14.738 -14.157,-18.656 -14.157,-18.656 -11.568,-7.914 0.872,-7.752 0.872,-7.752 12.804,0.9 19.546,13.14 19.546,13.14 11.372,19.493 29.828,13.857 37.104,10.6 1.144,-8.242 4.449,-13.866 8.095,-17.05 -28.32,-3.225 -58.092,-14.158 -58.092,-63.014 0,-13.92 4.981,-25.295 13.138,-34.224 -1.324,-3.212 -5.688,-16.18 1.235,-33.743 0,0 10.707,-3.427 35.073,13.07 10.17,-2.826 21.078,-4.242 31.914,-4.29 10.836,0.048 21.752,1.464 31.942,4.29 24.337,-16.497 35.029,-13.07 35.029,-13.07 6.94,17.563 2.574,30.531 1.25,33.743 8.175,8.929 13.122,20.303 13.122,34.224 0,48.972 -29.828,59.756 -58.22,62.912 4.573,3.957 8.648,11.717 8.648,23.612 0,17.06 -0.148,30.791 -0.148,34.991 0,3.393 2.295,7.369 8.759,6.117 50.634,-16.879 87.122,-64.656 87.122,-120.973 C 255.009,57.085 197.922,0 127.505,0"/>
+            </svg>
+          </a>
         </div>
       </div>
       <!-- Extra Div to mimic a background-colorable mb-10-->
@@ -135,7 +186,6 @@
              href="https://dev.to/ambro17"
              target="_blank">
             <span>{{ $t('view_all_posts') }}</span>
-
             <svg class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
             </svg>
@@ -267,6 +317,10 @@
   ::-webkit-scrollbar-thumb:hover{
     background: #718096;
   }
+  .social-media-icon {
+    @apply h-6 w-6 sm:h-6 sm:w-6
+  }
+
 </style>
 
 <script>

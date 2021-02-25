@@ -7,7 +7,7 @@
         "whoami": "Soy Nahuel",
         "nice": "Un gusto conocerte"
       },
-      "full_text": "Soy un ingeniero en software que ❤ {tech1} {and} {tech2} {br} 📚 Mis intereses hoy en día rondan principalmente sobre {br} {interest1}, {interest2}, y {interest3} {br} 💼 Actualmente trabajo en {onapsis_link} como Sr Python Developer {br} En mi tiempo libre me gusta correr y andar en bicicleta 🚴",
+      "full_text": "Soy un ingeniero en software que ❤ {tech1} {and} {tech2} {br} 📚 Mis intereses hoy en día rondan principalmente sobre {br} {interest1}, {interest2}, y {interest3} {br} 💼 Actualmente trabajo en {onapsis_link} como Python Developer {br} En mi tiempo libre me gusta correr y andar en bicicleta 🚴",
       "tech1": "Python",
       "and": "y",
       "tech2": "GraphQL",
