@@ -7,6 +7,7 @@
 
     <!-- Lead Intro -->
     <section class="
+      h-screen
       section-main 
       bg-white
       dark:bg-gray-900
@@ -15,22 +16,22 @@
       dark:border-gray-900
       "
     >
-      <div class="max-w-2xl px-6 text-center mx-auto sm:mt-10">
+      <div class="max-w-2xl px-6 text-center mx-auto mt-2 sm:mt-12 lg:mt-16">
         <h2 
-          class="text-3xl font-semibold text-gray-800 dark:text-gray-50">
+          class="text-3xl sm:text-4xl font-semibold text-gray-800 dark:text-gray-50">
           {{ $t('home.intro.pre.hi') }}, 
           <span class="
             bg-indigo-600 
             dark:bg-indigo-500 
             text-white 
             rounded px-1"
-          >{{ $t('home.intro.pre.whoami') }}</span> .
-            {{ $t('home.intro.pre.nice') }}
+          >{{ $t('home.intro.pre.whoami') }}</span>
         </h2>
 
         <i18n path="home.intro.full_text" tag="p" class="
           text-lg
-          leading-relaxed 
+          sm:text-xl
+          leading-normal 
           sm:leading-loose
           sm:text-xl
           text-gray-600 
@@ -73,7 +74,7 @@
             >Onapsis</a>
           </template>
         </i18n>
-        <div class="flex items-end justify-center mt-12">
+        <div class="avatar-icon flex items-end justify-center mt-6 sm:mt-12">
           <div class="w-48 h-48 relative mb-6">
             <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
               <img 
@@ -129,21 +130,15 @@
           </a>
         </div>
       </div>
-      <!-- Extra Div to mimic a background-colorable mb-10-->
-      <div class="
-        fake-margin-bottom-20 
-        border-b-80
-        border-white
-        dark:border-gray-900">
-      </div>
+
     </section>
 
     <!-- About -->
     <section class="section-secondary bg-gray-800 dark:bg-gray-900 pattern py-20">
       <div class="max-w-5xl px-6 mx-auto text-center">
-        <h2 class="text-2xl font-semibold text-white">{{ $t('home.about.header') }}</h2>
+        <h2 class="text-3xl font-semibold text-white">{{ $t('home.about.header') }}</h2>
 
-        <p class="text-gray-400 dark:text-gray-200 mt-10">
+        <p class="text-gray-300 text-lg dark:text-gray-200 mt-10">
           {{ $t('home.about.pre') }}
           <br>
           {{ $t('home.about.post') }}
