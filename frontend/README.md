@@ -21,6 +21,7 @@ Using templates from [here](https://tailwindcomponents.com/component/developer-p
  [x] Auto detect user language and adjust accordingly
  [x] Make header sticky
  [ ] Make lead page fit the full screen *on-mobile* but not on bigger media sizes
+ [ ] Add accesibility tool (lighthouse?) to CI workflow
  [ ] Move repetead elements to subcomponents (icons, article layout, etc)
  [ ] Use flag svgs instead of emojis to have consistent ui over different fonts on language switcher
 
