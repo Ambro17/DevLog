@@ -4,7 +4,7 @@ My Personal Blog
 ![hi](https://github.com/Ambro17/DevLog/blob/main/preview.png)
 
 ## Tech Stack
-The repo uses `vue+tailwind` for the frontend
+The repo uses `Vue+Tailwind` for the frontend
 and `Python+Flask+GraphQL` for the backend
 
 ## Development
