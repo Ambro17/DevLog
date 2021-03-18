@@ -13,7 +13,8 @@ Using templates from [here](https://tailwindcomponents.com/component/developer-p
  [x] Create Header and Footer vue components
  [x] Implement internationalization (Spanish + English)
  [x] Enable dark mode
- [ ] Migrate posts data to use graphql+strawberry (django? flask?)
+ [ ] Add 3 posts to post listing
+ [ ] Serve posts graphql+strawberry (django? flask? hasura?)
 
 ## Improvements
  [x] Fine-tune site performance with lighthouse - Score of 95+
