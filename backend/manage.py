@@ -12,14 +12,15 @@ def save_posts():
         """
         {
             posts {
-            topic
-            title
-            preview
-            readingTime
-            content
-            author {
-                name
-            } 
+                topic
+                title
+                preview
+                readingTime
+                content
+                author {
+                    name
+                }
+                publishedOn
             }
         }
         """

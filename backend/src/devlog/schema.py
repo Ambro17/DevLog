@@ -1,4 +1,4 @@
-import textwrap
+import datetime
 from pathlib import Path
 from typing import List
 
@@ -19,8 +19,10 @@ class Query:
                 preview='...',
                 content='Lorem Ipsum',
                 reading_time=5,
-                author=Author('Me')),
-            ]
+                author=Author('Me'),
+                published_on=datetime.datetime(2020, 1, 17)
+            )
+        ]
 
 
 

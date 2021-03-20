@@ -1,4 +1,5 @@
 from typing import List
+import datetime
 import strawberry
 
 
@@ -21,7 +22,9 @@ class Post:
     preview: str
     reading_time: int
     content: str
+    published_on: datetime.datetime
     author: Author
+
 
 
 @strawberry.type

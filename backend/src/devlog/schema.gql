@@ -2,12 +2,16 @@ type Author {
   name: String!
 }
 
+"""Date with time (isoformat)"""
+scalar DateTime
+
 type Post {
   topic: String!
   title: String!
   preview: String!
   readingTime: Int!
   content: String!
+  publishedOn: DateTime!
   author: Author!
 }
 
