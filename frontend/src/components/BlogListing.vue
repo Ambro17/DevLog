@@ -3,7 +3,6 @@
 
   <!--Header-->
   <Header />   
-  
   <!--Container-->
   <div class="container px-4 md:px-0 max-w-6xl mx-auto mt-20 mb-10">
     
@@ -47,7 +46,7 @@
       <!--Posts Container-->
       <div class="flex flex-wrap justify-between pt-12 -mx-6">
 
-        <!--1/3 col -->
+        <!--1/2 col -->
         <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
           <div class="flex-1 bg-white dark:bg-gray-700 rounded-t rounded-b-none overflow-hidden shadow-lg">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
@@ -68,7 +67,7 @@
         </div>
       
         
-        <!--1/3 col -->
+        <!--1/2 col -->
         <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
           <div class="flex-1 bg-white dark:bg-gray-700 rounded-t rounded-b-none overflow-hidden shadow-lg">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
@@ -87,8 +86,6 @@
             </div>
           </div>
         </div>
-
-        <!--1/3 col -->
 
       </div>
       <!-- End Post Content-->
@@ -113,6 +110,28 @@ export default {
   components: {
     Header,
     Footer
+  },
+  data: function() {
+    // posts: [
+    //   {
+    //     topic: "Python",
+    //     title: "Why Python is the best",
+    //     preview: "This is the clickbait intro to read the article",
+    //     reading_time: 5
+    //   },
+    //   {
+    //     topic: "GraphQL",
+    //     title: "Why GraphQL is the worst",
+    //     preview: "This is the clickbait intro to read the article",
+    //     reading_time: 5
+    //   },
+    //   {
+    //     topic: "Git",
+    //     title: "Why i love emojis on git history",
+    //     preview: "This is the clickbait intro to read the article",
+    //     reading_time: 5
+    //   },
+    // ]
   }
 }
 </script>

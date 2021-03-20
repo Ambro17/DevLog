@@ -16,7 +16,10 @@ class Author:
 
 @strawberry.type
 class Post:
+    topic: str
     title: str
+    preview: str
+    reading_time: int
     content: str
     author: Author
 

@@ -12,6 +12,9 @@ install-be:
 
 install: install-fe install-be
 
+collect-posts:
+	cd backend && poetry run python 
+
 
 .PHONY: frontend api install-fe install-be install
 

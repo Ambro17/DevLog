@@ -1,5 +1,5 @@
 ## Article Ideas:
-- [ ] Automatic Git Emojis for more readable commit history
+- [x] Automatic Git Emojis for more readable commit history
 - [ ] Rest vs GraphQL talk to text
 - [ ] Pythonic GraphQL APIs talk to text
 - [ ] GraphQL Schema Design in Spanish
