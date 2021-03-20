@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>strawberry</title></head>
+<body><h1>Why Strawberry is the future of Python+GraphQL</h1>
+<p>At work we started implemented a GraphQL API to overcome some of the shortcomings of our REST<em>ish</em> API.</p>
+<p>At first we chose graphene as it was the library with most active development and contributors, but soon it became obvious that our approach of mapping resolvers to sql views was not going to be performant enough so we took a step back and reassessed our options.</p>
+<p>Finally, we chose an in-house solution that decorates python classes to the corresponding sqlalchemy model, in order to generate <code>one</code> sql query per <code>graphql</code> query. That way we avoided subselects that could kill performance. Although that approach works, and there are a <a href='https://hasura.io/'>few</a> <a href='https://www.graphile.org/postgraphile/'>companies</a> around that approach. The <a href='https://productionreadygraphql.com/blog/2020-05-21-graphql-to-sql'>best practices</a> seems to discourage this approach and instead recommend the <a href='https://xuorig.medium.com/the-graphql-dataloader-pattern-visualized-3064a00f319f'>DataLoader pattern</a> to efficiently avoid the n+1 problem.</p>
+<p>Within that context, it is reasonable to expect that a Library with good dataloader integration will be a good investment in the scalability of our GraphQL API.</p>
+<p>But wait, both graphene and strawberry offer support for DataLoaders. So in what way is strawberry different?
+I will try to explain it with an example. Let&#39;s suppose we are creating an API for the next Python Conference and we want to empower different users to get the data they need to build custom integrations, and ultimately, increase the attendance and networking effects of the conference.</p>
+<p>Our API should first help attendees to choose talks based on their content or author. Following Design First Practices, our API should look something like this:</p>
+<pre><code class='language-graphql' lang='graphql'>type Query {
+    talks: [Talk!]!
+}
+
+type Talk {
+    title: String!
+    author: Author!
+    topic: Topic!
+    description: String!
+    when: DateTime!
+}
+</code></pre>
+<p> Now let&#39;s try to build it with Graphene and with Strawberry to compare them.</p>
+<p>Strawberry:</p>
+<pre><code>from typing import List
+import strawberry
+
+@strawberry.type
+class Author:
+    name: str
+
+
+@strawberry.type
+class Talk:
+    title: str
+    author: Author
+
+
+@strawberry.type
+class Query:
+
+    @strawberry.field
+    def talks(self) -&gt; List[Talk]:
+        return [Talk(title=&quot;Some Pycon Talk&quot;, author=Author(&#39;Ms. Speaker&#39;))]
+
+schema = strawberry.Schema(query=Query, types=[Talk, Workshop])
+</code></pre>
+<p>Graphene</p>
+<pre><code class='language-python' lang='python'>from graphene import ObjectType, String, Field, Schema, List
+
+
+class Author(ObjectType):
+    name = String()
+
+
+class Talk(ObjectType):
+    title = String()
+    author = Field(Author)
+
+
+class Query(ObjectType):
+    events = List(Talk)
+    
+    def resolve_events(self, info):
+        return [Talk(title=&#39;Some Title&#39;, author=Author(&#39;Mr. Speaker&#39;))]
+
+schema = Schema(query=Query)
+</code></pre>
+<p>&nbsp;</p>
+<p>They look somewhat similar, but the fact that strawberry uses type hints to decorate types  integrations of strawberry gives much better integration with IDEs for suggestions and bug detection. Besides that, i personally like that approach more because it&#39;s much more readable and one can focus on the problem domain instead of the library syntax.</p>
+<p>This case was the trivial one, but once you start using more advanced features, graphene starts diverging more and more from the <code>Schema Definition Language</code>, so following Design First on your API gets more difficult as developers may have a tendency to first code and then see what the generated schema is. I believe this ends deteriorating the final product (a.k.a The API).</p>
+<p>Let&#39;s show an example of a more complex example with interfaces and unions to see how they look</p>
+<pre><code class='language-graphql' lang='graphql'>type Query {
+    events: [Event!]!
+}
+
+interface Event {
+    title: String!
+    when: DateTime!
+}
+
+type Talk implements Event {
+    speaker: Speaker!
+}
+
+type Workshop implements Event {
+    prerequisites: String!
+    max_participants: Int!
+}
+
+type Activity = Talk | Workshop | SponsorSlot
+</code></pre>
+<p>In Strawberry it looks like this</p>
+<pre><code class='language-python' lang='python'>from datetime import datetime
+
+from typing import List
+import strawberry
+
+
+@strawberry.interface
+class Event:
+    title: str
+    when: datetime
+
+@strawberry.type
+class Talk(Event):
+    title: str
+    when: datetime
+    duration_in_minutes: int
+
+@strawberry.type
+class Workshop(Event):
+    title: str
+    when: datetime
+    max_participants: int
+
+
+@strawberry.type
+class Query:
+
+    @strawberry.field
+    def events(self) -&gt; List[Event]:
+        return [
+            Talk(&#39;One Talk&#39;, datetime.utcnow(), duration_in_minutes=30),
+            Workshop(&#39;One Workshop&#39;, datetime.utcnow(), max_participants=50),
+        ]
+
+
+schema = strawberry.Schema(query=Query, types=[Talk, Workshop])
+
+</code></pre>
+<p>In graphene, interfaces are a little bit more weird as they don&#39;t use normal inheritance but a special attribute on the <code>Meta</code> class</p>
+<pre><code>from datetime import date, datetime
+import graphene
+
+
+class Event(graphene.Interface):
+    title = graphene.String()
+    when = graphene.DateTime()
+
+    @classmethod
+    def resolve_type(cls, instance, info):
+        return instance.__class__.__name__
+
+
+class Talk(graphene.ObjectType):
+    class Meta:
+        interfaces = (Event,)
+
+    duration_in_minutes = graphene.Int()
+
+
+class Workshop(graphene.ObjectType):
+    class Meta:
+        interfaces = (Event,)
+
+    max_participants = graphene.Int()
+
+
+class Query(graphene.ObjectType):
+    events = graphene.List(Event)
+
+    def resolve_events(root, info):
+        return [
+            Talk(&#39;Talk #1&#39;, datetime.utcnow(), duration_in_minutes=30),
+            Workshop(&#39;Workshop #1&#39;, datetime.utcnow(), max_participants=50),
+        ]
+
+
+schema = graphene.Schema(query=Query, types=[Talk, Workshop])
+
+</code></pre>
+<p>It might be too subjective, but i find Strawberry&#39;s API much more intuitive and <em>pythonic</em>. Mainly due to the type hint + inheritance vs Custom Classes + Meta Class.</p>
+<p>Another advantage of strawberry is it&#39;s builtin debug server that opens a graphiql instance to quickly explore and prototype your API.</p>
+<p>&nbsp;</p>
+<p>In an effort to be as objective as possible i&#39;ve enumerated the reasons why i believe strawberry is a better choice than graphene.</p>
+<pre><code>- It favors **Design First** practices
+- It has an **Active Community**, while Graphene is looking for maintainers to recover from stagnation
+- It supports **async** resolvers
+- It supports **Apollo Federation**
+- It has **integrations with Django, Flask**, Sanic and many more Web Frameworks
+- Con: It&#39;s still not considered stable (v1.0.0)
+</code></pre>
+<h2>Design First</h2>
+<p>GraphQL has two main development philosophies. Mainly Schema First vs Code First. Many have written really extensible about that topic so i will not get into that but i leave some links here: #1 #2 #3</p>
+<p>What i will say is that i&#39;m a follower of the code first approach, but i recognise the advantage of writing the schema first in terms of avoiding coupling your schema to your fetching layer. In that sense, i really like strawberry as it&#39;s dataclasses are really similar to the final SDL. So as we&#39;re still using Code-First approach, we&#39;re not blocked by syntax if we want to follow a Design-First Approach.</p>
+<p>I tried Ariadne, a Schema-First Python Library for GraphQL but i didn&#39;t find it intuitive or fast to prototype and develop. But you may think differently so take a look at that and decide for yourself! I recommend to do a small poc on both libs and see what&#39;s the experience like and how complete is the support for integrations with Django, SQLAlchemy, or any other software you may already be relying on. </p>
+<blockquote><p>So i like strawberry because it&#39;s Code First but helps following Design First practices unlike Graphene and offers better development experience than Ariande.</p>
+</blockquote>
+<h2>Active Community</h2>
+<p>Discord with really helpful author and development team that helps diagnosing bugs, and is welcoming to new ideas and contributors.</p>
+<p>To give a concrete example, the library internal code is being revamped by a user that&#39;s not the original author, and one of the main graphene maintainers has migrated his development efforts to strawberry. It seems the tide is turning 😛</p>
+<p>On the other hand, Graphene has many unresolved issues and the v3 effort seems to be stagnated, lacking people to push the effort required to release the version. It seems working for free is not a viable model when the lib grows too complex to be enjoyable</p>
+<h2>Async Support</h2>
+<p>Async is the new cool feature of Python. SQLAlchemy, Django, FastApi and most of the most popular libs are offering the possibility of being used in an async fashion.</p>
+<p>I will not argue in favor or against using async for your API, but it&#39;s useful to have the possibility of doing it if your team decides it&#39;s the best choice</p>
+<h2>Apollo Federation</h2>
+<p> Apollo Federation is a paradigm to compose mutiple schemas into a single one without performance penalities. It&#39;s a spec that GraphQL servers must adhere too in order to be composed into a larger graph and strawberry supports it.</p>
+<h2>Integrations</h2>
+<p>A not so minor detail is that you can easily use Strawberry with Django, Flask, or </p>
+<p>&nbsp;</p>
+<h2>😞 It&#39;s still not v1</h2>
+<p>Although API will not have major changes as per the author words, it doesn&#39;t promise production stability yet. </p>
+<p>&nbsp;</p>
+</body>
+</html>
