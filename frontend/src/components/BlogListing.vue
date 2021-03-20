@@ -21,17 +21,17 @@
 
           <div class="w-full md:w-1/3 flex flex-col flex-grow flex-shrink">
             <div class="flex-1 bg-white rounded-t dark:bg-gray-700  rounded-b-none overflow-hidden shadow-lg">
-              <p class="w-full text-gray-600 dark:text-gray-300 text-xs md:text-sm pt-6 px-6">GETTING STARTED</p>
-              <div class="w-full font-bold text-xl text-gray-900 dark:text-gray-200 px-6">👋 Welcome fellow Tailwind CSS and Ghost fan</div>
+              <p class="w-full text-gray-600 dark:text-gray-300 text-xs md:text-sm pt-6 px-6">{{posts[0].topic.toUpperCase()}}</p>
+              <div class="w-full font-bold text-xl text-gray-900 dark:text-gray-200 px-6">{{ posts[0].title }}</div>
               <p class="text-gray-800 dark:text-gray-300 font-serif text-base px-6 mb-5">
-                This starter template is an attempt to replicate the default Ghost theme "Casper" using Tailwind CSS and vanilla Javascript.
+                {{posts[0].preview}}
               </p>
             </div>
 
             <div class="flex-none mt-auto bg-white dark:bg-gray-800 rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
               <div class="flex items-center justify-between">
                 <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author">
-                <p class="text-gray-600 dark:text-gray-400 text-xs md:text-sm">1 MIN READ</p>
+                <p class="text-gray-600 dark:text-gray-400 text-xs md:text-sm">{{posts[0].readingTime}} MIN READ</p>
               </div>
             </div>
           </div>
@@ -47,46 +47,24 @@
       <div class="flex flex-wrap justify-between pt-12 -mx-6">
 
         <!--1/2 col -->
-        <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
+        <div v-for="post in posts.slice(1)" :key="post.title" class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
           <div class="flex-1 bg-white dark:bg-gray-700 rounded-t rounded-b-none overflow-hidden shadow-lg">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
               <img src="https://source.unsplash.com/collection/225/800x400" class="h-64 w-full rounded-t pb-6">
-              <p class="w-full text-gray-600 dark:text-gray-400 text-xs md:text-sm px-6">GETTING STARTED</p>
-              <div class="w-full font-bold text-xl text-gray-900 dark:text-gray-200 px-6">Lorem ipsum dolor sit amet.</div>
+              <p class="w-full text-gray-600 dark:text-gray-400 text-xs md:text-sm px-6">{{post.topic}}</p>
+              <div class="w-full font-bold text-xl text-gray-900 dark:text-gray-200 px-6">{{post.title}}</div>
               <p class="text-gray-800 dark:text-gray-400 font-serif text-base px-6 mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. 
+                {{post.preview}}
               </p>
             </a>
           </div>
           <div class="flex-none mt-auto bg-white dark:bg-gray-800 rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
             <div class="flex items-center justify-between">
               <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author">
-              <p class="text-gray-600 dark:text-gray-400 text-xs md:text-sm">1 MIN READ</p>
+              <p class="text-gray-600 dark:text-gray-400 text-xs md:text-sm">{{post.readingTime}} MIN READ</p>
             </div>
           </div>
         </div>
-      
-        
-        <!--1/2 col -->
-        <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white dark:bg-gray-700 rounded-t rounded-b-none overflow-hidden shadow-lg">
-            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <img src="https://source.unsplash.com/collection/3106804/800x400" class="h-64 w-full rounded-t pb-6">
-              <p class="w-full text-gray-600 dark:text-gray-400 text-xs md:text-sm px-6">GETTING STARTED</p>
-              <div class="w-full font-bold text-xl text-gray-900 dark:text-gray-200 px-6">Lorem ipsum dolor sit amet.</div>
-              <p class="text-gray-800 dark:text-gray-400 font-serif text-base px-6 mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ip Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. 
-              </p>
-            </a>
-            </div>
-          <div class="flex-none mt-auto bg-white dark:bg-gray-800 rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
-            <div class="flex items-center justify-between">
-              <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author">
-              <p class="text-gray-600 dark:text-gray-400 text-xs md:text-sm">1 MIN READ</p>
-            </div>
-          </div>
-        </div>
-
       </div>
       <!-- End Post Content-->
           
@@ -112,26 +90,40 @@ export default {
     Footer
   },
   data: function() {
-    // posts: [
-    //   {
-    //     topic: "Python",
-    //     title: "Why Python is the best",
-    //     preview: "This is the clickbait intro to read the article",
-    //     reading_time: 5
-    //   },
-    //   {
-    //     topic: "GraphQL",
-    //     title: "Why GraphQL is the worst",
-    //     preview: "This is the clickbait intro to read the article",
-    //     reading_time: 5
-    //   },
-    //   {
-    //     topic: "Git",
-    //     title: "Why i love emojis on git history",
-    //     preview: "This is the clickbait intro to read the article",
-    //     reading_time: 5
-    //   },
-    // ]
+    return {
+      posts: [
+        {
+            "topic": "🐍 Python",
+            "title": "This is some post title",
+            "preview": "This starter template is an attempt to replicate the default Ghost theme \"Casper\" using Tailwind CSS and vanilla Javascript.",
+            "readingTime": 5,
+            "content": "Lorem Ipsum",
+            "author": {
+                "name": "Me"
+            }
+        },
+        {
+            "topic": "🔄 Git",
+            "title": "#2 Second post title",
+            "preview": "This starter template is an attempt to replicate the default Ghost theme \"Casper\" using Tailwind CSS and vanilla Javascript.",
+            "readingTime": 10,
+            "content": "Lorem Ipsum",
+            "author": {
+                "name": "Me"
+            }
+        },
+        {
+            "topic": "🛰️ GraphQL",
+            "title": "#3 This is the thrid title",
+            "preview": "This starter template is an attempt to replicate the default Ghost theme \"Casper\" using Tailwind CSS and vanilla Javascript.",
+            "readingTime": 15,
+            "content": "Lorem Ipsum",
+            "author": {
+                "name": "Me"
+            }
+        }
+      ]
+    }
   }
 }
 </script>
