@@ -1,0 +1,12 @@
+[
+    {
+        "topic": "Python",
+        "title": "Ambro",
+        "preview": "...",
+        "readingTime": 5,
+        "content": "Lorem Ipsum",
+        "author": {
+            "name": "Me"
+        }
+    }
+]
