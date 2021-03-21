@@ -2,7 +2,7 @@ api:
 	cd backend && poetry run strawberry server src.devlog.schema && cd -
 
 frontend:
-	cd frontend && npm run serve && cd -
+	cd frontend && npm run start && cd -
 
 install-fe:
 	cd frontend && npm install && cd -
