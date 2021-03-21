@@ -38,16 +38,17 @@
         
                         
         </div>
-          <!--Author-->
-          <div class="flex w-full items-center font-sans p-8 md:p-12">
-            <img class="w-10 h-10 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of Author">
-            <div class="flex-1">
-              <p class="text-base dark:text-gray-300 font-bold text-base md:text-xl leading-none">UnwantedCrow</p>
-              <p class="text-gray-600 dark:text-gray-500 text-xs md:text-base">Always looking to learn the next big thing</p>
-            </div>
+        <ckeditor :editor="editor" ></ckeditor>
+
+        <!--Author-->
+        <div class="flex w-full items-center font-sans p-8 md:p-12">
+          <img class="w-10 h-10 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of Author">
+          <div class="flex-1">
+            <p class="text-base dark:text-gray-300 font-bold text-base md:text-xl leading-none">UnwantedCrow</p>
+            <p class="text-gray-600 dark:text-gray-500 text-xs md:text-base">Always looking to learn the next big thing</p>
           </div>
-          <!--/Author-->
-        
+        </div>
+      
       </div>
     </div>
 
@@ -57,17 +58,23 @@
 </template>
 
 <script>
-import Header from './Header.vue'
-import Footer from './Footer.vue'
+import CKEditor from '@ckeditor/ckeditor5-vue2';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
+import Header from './Header.vue';
+import Footer from './Footer.vue';
+
 
 export default {
   name: 'BlogPost',
   components: {
     Header,
-    Footer
+    Footer,
+    ckeditor: CKEditor.component,
   },
   data: function() {
     return {
+      editor: ClassicEditor,
       post: {
           "topic": "🐍 Python",
           "title": "This is some post title",

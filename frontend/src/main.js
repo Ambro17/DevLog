@@ -5,7 +5,6 @@ import i18n from './i18n'
 
 import './assets/styles/index.css';
 
-// DarkMode Mixin
 const darkModeMixin = {
   created() {
     // If user has chosen dark theme OR, it hasn't chosen dark theme, but prefers it on a system level
